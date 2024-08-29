@@ -19,12 +19,12 @@
 # in the templates via {{ site.myvariable }}.
 
 title: BLOG
-email: ejjoo7994@gmail.com
+email: kty991213@naver.com
 description: >- # this means to ignore newlines until "baseurl:"
-  개발새발 김태영
+  개발 새발 김태영
 # baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://taeyoungkim1213.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
-github_username: ejjoo
+github_username: taeyoungkim1213
 highlighter: rouge
 svg:
   optimize: true
@@ -36,6 +36,9 @@ plugins:
   - jekyll-feed
 category_dir: category/
 tag_dir: tag/
+
+# Watch setting
+watch: true
 
 
 # Exclude from processing.

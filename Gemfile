@@ -1,7 +1,7 @@
 # Gemfile
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4.3.1" # 또는 최신 안정 버전
+gem "jekyll", "~> 4.3.3" # 또는 최신 안정 버전
 
 gem "jekyll-sass-converter", "~> 2.2.0"
 gem "mercenary", "~> 0.3.6"
@@ -17,3 +17,8 @@ if Gem.win_platform?
 end
 
 gem "webrick", "~> 1.8"
+gem "jekyll-watch", "~> 2.2"
+gem "listen", "~> 3.3.0"
+gem 'wdm', '>= 0.1.0'
+
+
