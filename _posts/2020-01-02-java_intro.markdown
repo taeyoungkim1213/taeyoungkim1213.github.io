@@ -21,7 +21,8 @@ categories: java
 
 - **보안**: 자바는 강력한 보안 기능을 제공하여 안전한 프로그램 실행을 지원합니다. 자바 애플리케이션은 JVM에서 샌드박스 환경에서 실행되어 악성 코드로부터 시스템을 보호합니다.
 
-> [Java 8 SE 구조](https://docs.oracle.com/javase/8/docs/)
+> <a href="https://docs.oracle.com/javase/8/docs/" target="_blank">Java 8 SE 구조</a>
+
 
 ![자바구조](/public/img/java/자바구조.png)<br>
 * **JDK(java Development Kit)**: 자바 프로그램에 필요한 구성 요소

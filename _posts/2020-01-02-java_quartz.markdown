@@ -20,7 +20,7 @@ Quartz Scheduler 를 이용해 한번 적용해보자
 6. **TriggerBuilder** – Trigger instances 빌드에 사용
 
 > ## Dependency
-[쿼츠를 사용하기 위해 Dependency]("https://central.sonatype.com/")를 가져와서 적용해보자 <br>
+<a href="https://central.sonatype.com/" target="_blank">쿼츠를 사용하기 위해 Dependency</a>를 가져와서 적용해보자 <br>
 
 ```
     <dependency>
@@ -95,7 +95,8 @@ property name="jobDetail" ref="deleteOldMembersJob"
 ```
 property name="cronExpression" value="0 0 0 * * ?"
 ```
-: 이 속성은 Cron 표현식으로 작업이 실행될 시각을 지정합니다. 0 0 0 * * ?는 매일 자정(오전 12:00)에 작업이 실행되도록 설정합니다.
+: 이 속성은 <a href="https://crontab.guru/" target="_blank">Cron 표현식</a>으로 작업이 실행될 시각을 지정합니다. 0 0 0 * * ?는 매일 자정(오전 12:00)에 작업이 실행되도록 설정합니다.
+
 
 
 ># UserScheduling.java

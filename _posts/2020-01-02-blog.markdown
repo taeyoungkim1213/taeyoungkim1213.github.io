@@ -41,7 +41,8 @@ category: git
     git remote add origin <HTTPS>
     ```
 
-5. [Jekyll Themes](http://jekyllthemes.org/)에서 원하는 테마를 선택합니다:<br>
+5. <a href="http://jekyllthemes.org/" target="_blank">Jekyll Themes</a>에서 원하는 테마를 선택합니다
+<br>
     ![테마 선택](/public/img/blog/테마선택.png)<br>
 
 6. 선택한 테마를 다운로드하고 `git_blog` 폴더에 복사합니다. 기존 파일이 덮어쓰여질 수 있습니다:<Br>
@@ -57,7 +58,7 @@ category: git
     ruby 3.3.4 (2024-07-09 revision be1089c8ec) [x64-mingw-ucrt]
     ```
 
-8. Ruby가 설치되어 있지 않다면, [Ruby 설치](http://jekyllthemes.org/) 페이지에서 최신 버전을 설치합니다.
+8. Ruby가 설치되어 있지 않다면, <a href="http://jekyllthemes.org/" target="_blank">Ruby 설치</a> 페이지에서 최신 버전을 설치합니다.
 
 9. `Gemfile`을 확인하고 수정한 후, Bundler를 사용하여 gem을 설치합니다:
     ```
