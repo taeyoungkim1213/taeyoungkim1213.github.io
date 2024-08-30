@@ -31,16 +31,16 @@ git_blog 폴더에 이동해서  jekyll new 를 이용하여 기본 패기지를
 $ cd git_blog
 $ jekyll new ./
 ```
-만약 jekyll new ./ 명령어가 오류가 뜬다면 
 
+만약 jekyll new ./ 명령어가 오류가 뜬다면 $ jekyll new ./ --force 로 강제로 한다.
 ```ruby
-$ jekyll new ./ --force 로 강제로 한다.
+$ jekyll new ./ --force 
 ```
 
-깃을 연결하자 <HTTP 주소> 는 위 이미지의 HTTPS 주소를 입력하면 된다.
+깃을 연결하자 <HTTPS> 는 위 이미지의 HTTPS 주소를 입력하면 된다.
 ```ruby
 $ git init
-$ git remote add origin <HTTP 주소>
+$ git remote add origin <HTTPS>
 ```
 1. 이제 자기가 원하는 테마를 정하러 가보자 아래 사이트에서 고르면 된다.<br>
 [테마 정하러 가기](http://jekyllthemes.org/)<br>
