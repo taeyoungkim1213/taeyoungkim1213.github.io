@@ -1,24 +1,23 @@
 ---
 layout: post
-title: 초간단 블로그 만들기
-date: 2024-08-02 19:20:23 +0900
-category: blog
+title: git hub 초간단 블로그 만들기
+date: 2024-03-02 19:20:23 +0900
+category: git
 ---
 
 # 1. GitHub에서 NEW repository를 생성합니다
 
-> ![GitHub 레파지토리 만들기](/public/img/git레파지토리 만들기.png)
+> ![GitHub 레파지토리 만들기](/public/img/blog/git레파지토리 만들기.png)
 
 1. **username**에는 자신의 GitHub username을 입력하여 repository를 생성합니다. 예를 들어 `taeyoungkim1213.github.io`와 같은 형식으로 설정합니다.
 2. **Public**을 체크합니다.
 3. **README file**을 체크합니다.
 4. **Create repository**를 눌러 생성합니다.
 
----
 
 # 2. 자신의 폴더에 repository를 연결합니다
 
-> ![Git 주소 확인](/public/img/git주소.png)
+> ![Git 주소 확인](/public/img/blog/git주소.png)
 
 1. 새로운 폴더를 만듭니다:
     ```
@@ -43,10 +42,10 @@ category: blog
     ```
 
 5. [Jekyll Themes](http://jekyllthemes.org/)에서 원하는 테마를 선택합니다:<br>
-    ![테마 선택](/public/img/테마선택.png)<br>
+    ![테마 선택](/public/img/blog/테마선택.png)<br>
 
 6. 선택한 테마를 다운로드하고 `git_blog` 폴더에 복사합니다. 기존 파일이 덮어쓰여질 수 있습니다:<Br>
-    ![테마 다운로드](/public/img/테마다운.png)
+    ![테마 다운로드](/public/img/blog/테마다운.png)
 
 7. Ruby가 설치되어 있는지 확인합니다:
     ```
@@ -78,9 +77,9 @@ category: blog
     ```
 
 11. 서버가 정상적으로 실행되면, 아래와 같은 문구를 확인할 수 있습니다. 로컬 주소(http://127.0.0.1:4000/)로 접속합니다:<br>
-    ![로컬 실행](/public/img/로컬실행.png)<br>
+    ![로컬 실행](/public/img/blog/로컬실행.png)<br>
     로컬 실행화면: <br>
-    ![로컬 실행 화면](/public/img/로컬실행화면.png)
+    ![로컬 실행 화면](/public/img/blog/로컬실행화면.png)
 
 12. 모든 변경 사항을 Git에 추가하고 커밋한 후, 원격 저장소에 푸시합니다:
     ```
@@ -92,4 +91,6 @@ category: blog
 
 13. 마지막으로, GitHub 웹사이트에서 본인의 블로그 주소로 접속하여 제대로 작동하는지 확인합니다!
 
+
+---
 ## 이상으로 초 간단 블로그 만들기를 마치겠습니다 감사합니다!
