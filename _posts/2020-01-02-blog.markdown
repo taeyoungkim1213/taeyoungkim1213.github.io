@@ -2,26 +2,31 @@
 layout: post
 title: 초간단 블로그 만들기
 date: 2024-08-02 19:20:23 +0900
-#category 는 영어로만 /주소/적용됨
+# category 는 영어로만 /주소/적용됨
 category: blog
 ---
-# 1. github 에서 NEW repository를 생성을 누릅니다.
->![alt](/public/img/git레파지토리 만들기.png) 
 
-1. username 에는 자신의 git name을 넣어 만들어야 한다 <br>
-필자로 예시를 들면 taeyoungkim1213.github.io 로 repository를 이름을 설정
+# 1. GitHub에서 NEW repository를 생성을 누릅니다.
 
-2. Public을 체크!
+> ![alt](/public/img/git레파지토리 만들기.png) 
 
-3. README file 도 체크
+1. **username**에는 자신의 git name을 넣어 만들어야 합니다.  
+   필자로 예시를 들면 `taeyoungkim1213.github.io` 로 repository 이름을 설정
 
-4. Create repository 를 눌러 생성!
+2. **Public**을 체크!
 
+3. **README file**도 체크
 
-# 2. 자신의 폴더에 repository를 연결 하자
->![alt](/public/img/git주소.png) <br>
+4. **Create repository**를 눌러 생성!
 
-먼저 폴더를 만든다
+---
+
+# 2. 자신의 폴더에 repository를 연결하자
+
+> ![alt](/public/img/git주소.png) 
+
+먼저 폴더를 만듭니다:
+
 ```ruby
 $ mkdir git_blog
 ```
@@ -96,7 +101,7 @@ $ bundle add webrick
 
 ```ruby
 $ git add .
-$ git commit -m "change theme"
+$ git commit -m "git theme"
 $ git push --set-upstream origin main
 $ git push
 
