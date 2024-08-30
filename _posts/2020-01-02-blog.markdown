@@ -1,0 +1,94 @@
+---
+layout: post
+title: 초간단 블로그 만들기
+date: 2024-08-02 19:20:23 +0900
+#category 는 영어로만 /주소/적용됨
+category: blog
+---
+# 1. github 에서 NEW repository를 생성을 누릅니다.
+>![alt](/public/img/git레파지토리 만들기.png) 
+
+1. username 에는 자신의 git name을 넣어 만들어야 한다 <br>
+필자로 예시를 들면 taeyoungkim1213.github.io 로 repository를 이름을 설정
+
+2. Public을 체크!
+
+3. README file 도 체크
+
+4. Create repository 를 눌러 생성!
+
+
+# 2. 자신의 폴더에 repository를 연결 하자
+>![alt](/public/img/git주소.png) 
+
+```ruby
+먼저 폴더를 만든다
+$ mkdir git_blog
+
+git_blog 폴더에 이동해서  jekyll new 를 이용하여 기본 패기지를 다운받는다.
+$ cd git_blog
+$ jekyll new ./
+
+만약 jekyll new ./ 명령어가 오류가 뜬다면 
+$ jekyll new ./ --force 로 강제로 한다.
+
+깃을 연결하자 <HTTP 주소> 는 위 이미지의 HTTPS 주소를 입력하면 된다.
+$ git init
+$ git remote add origin <HTTP 주소>
+```
+1. 이제 자기가 원하는 테마를 정하러 가보자 아래 사이트에서 고르면 된다.<br>
+[테마 정하러 가기](http://jekyllthemes.org/)<br>
+![alt](/public/img/테마선택.png) <br>
+
+
+2. 필자는 이 테마로 선택을 하고 Download를 받았다.<br>
+![alt](/public/img/테마다운.png) <br>
+
+3. 받은 테마의 모든 파일을 아까 만든 git_blog 폴더에 복사 붙여넣기를 하면 된다.<br>
+겹치는 파일은 다 덮어쓰기 하면된다.
+
+4. 그리고 아래 명령어들을 따라한다.
+```ruby
+먼저 ruby가 깔려있는지 확인한다
+$ ruby -v
+깔려있다면 아래 처럼 나온다
+ruby 3.3.4 (2024-07-09 revision be1089c8ec) [x64-mingw-ucrt]
+```
+ruby가 안깔려있다면 
+[Ruby 설치](http://jekyllthemes.org/)부터 하자 가장 최신버전을 설치하면 된다
+
+
+5. ruby를 깔았다면 따라한다. <br>
+*** (중요)먼저 폴더안에 gemfile이 있을 것이다 <br>
+![alt](/public/img/gemfile주석.png) <br>
+
+```ruby
+gemfile을 수정했다면 아래 명령어 들을 따라한다
+$ bundle install
+$ bundle update
+$ bundle install
+
+모두 잘 설치되었는지 확인하기 위해 로컬 서버로 실행을 해봅시다.
+$ bundle exec jekyll serve
+
+만약 실행도중 webrick 파일을 찾을 수 없다는 에러가 뜬다면, 아래의 커맨드를 실행 후 다시 서버를 실행합니다.
+$ bundle add webrick
+```
+잘 실행이 되었다면, 아래와 같은 문구를 확인하실 수 있습니다. <br>
+아래 적힌 로컬 주소인 http://127.0.0.1:4000/으로 접속해줍시다.<br>
+![alt](/public/img/로컬실행.png)
+<br>접속화면<br>
+![alt](/public/img/로컬실행화면.png)
+
+로컬에서는 잘 작동합니다 이제 이상태도 깃헙에 커밋, 푸쉬하면 됩니다.
+
+```ruby
+$ git add .
+$ git commit -m "change theme"
+$ git push --set-upstream origin main
+$ git push
+
+순서대로 입력하시면 됩니다.
+```
+# 마지막으로 깃헙 홈페이지 주소로 들어가서 확인해 보세요!!~
+본인의 깃헙 주소로 연결해보시면 잘 되는 것을 보실 수 있습니다.
