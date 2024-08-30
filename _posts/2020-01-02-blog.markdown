@@ -37,7 +37,7 @@ $ jekyll new ./
 $ jekyll new ./ --force 
 ```
 
-깃을 연결하자 <HTTPS> 는 위 이미지의 HTTPS 주소를 입력하면 된다.
+깃을 연결하자 HTTPS 는 위 이미지의 HTTPS 주소를 입력하면 된다.
 ```ruby
 $ git init
 $ git remote add origin <HTTPS>
