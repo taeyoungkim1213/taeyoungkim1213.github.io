@@ -30,7 +30,7 @@ highlighter: rouge
 svg:
   optimize: true
 # Build settings
-# theme: minima
+theme: minima
 highlighter-theme: monokai
 date_format: "%Y-%M-%D"
 plugins:
@@ -40,6 +40,10 @@ tag_dir: tag/
 
 # Watch setting
 watch: true
+
+# Social Links
+social:
+  github: "taeyoungkim1213"
 
 
 # Exclude from processing.

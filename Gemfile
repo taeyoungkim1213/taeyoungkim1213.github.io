@@ -5,6 +5,7 @@ gem "jekyll", "~> 4.3.3" # 또는 최신 안정 버전
 
 gem "jekyll-sass-converter", "~> 2.2.0"
 gem "mercenary", "~> 0.3.6"
+gem "minima", "~> 2.5"
 
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
