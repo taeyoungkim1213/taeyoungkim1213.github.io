@@ -1,7 +1,7 @@
 ---
 layout: post
 title: java Quartz 스케줄러 적용해보기
-date: 2024-02-04 19:31:29 +0900
+date: 2024-09-28 19:31:29 +0900
 categories: java
 ---
 > ## java Quartz Scheduler

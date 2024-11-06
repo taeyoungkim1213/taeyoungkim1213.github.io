@@ -1,4 +1,15 @@
 # 로컬 실행할 때 bundle exec jekyll serve --livereload
+
+#마크업언어
+#테이블 :
+#  |index|Title|Column|
+#  |:----|:----|:-----|
+#  |  1  | 제목1| 내용1 |
+#  |  2  | 제목2| 내용2 |
+
+
+
+#이모티콘
 # 📌 ❓
 
 title: BLOG
