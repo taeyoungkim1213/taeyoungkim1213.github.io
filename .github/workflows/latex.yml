@@ -3,10 +3,10 @@ name: Build LaTeX to PDF
 on:
   push:
     paths:
-      - '*.tex'
+      - "*.tex"
 
 permissions:
-  contents: write 
+  contents: write   # push 권한 부여
 
 jobs:
   build:
@@ -14,7 +14,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4   # 최신 버전
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          ref: ${{ github.ref }}   # 현재 브랜치 따라감 (main 등)
 
       - name: Compile LaTeX with XeLaTeX
         uses: xu-cheng/latex-action@v3
@@ -22,30 +25,18 @@ jobs:
           root_file: resume.tex
           latexmk_use_xelatex: true
 
-      - name: Check generated files
-        run: |
-          echo "📂 현재 디렉토리 파일 목록:"
-          ls -lh
-          echo "resume.pdf 존재 여부 확인:"
-          test -f resume.pdf && echo "✅ resume.pdf 생성됨" || echo "❌ resume.pdf 없음"
-
-      - name: Upload PDF artifact
-        uses: actions/upload-artifact@v4   # <-- 여기 v4 로 변경
-        with:
-          name: resume-pdf
-          path: resume.pdf
-
       - name: Commit generated PDF to repo
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "GitHub Actions"
 
-          echo "📦 resume.pdf 파일 크기 확인:"
+          # PDF 생성 확인
           ls -lh resume.pdf || echo "❌ resume.pdf 없음"
 
           git add resume.pdf
           git commit -m "Auto-build PDF from LaTeX" || echo "⚠️ No changes to commit"
-          git push
+          git push origin HEAD:${GITHUB_REF#refs/heads/}
+
 
       - name: Show LaTeX log
         run: |
