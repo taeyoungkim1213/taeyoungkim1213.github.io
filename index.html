@@ -2,15 +2,85 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>이력서</title>
+  <title>경력 기술서</title>
   <style>
     body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
+    h1, h2, h3 { color: #222; }
+    .project { margin-bottom: 40px; }
+    .subproject { margin-left: 20px; margin-bottom: 20px; }
+    .tech { color: #0366d6; font-weight: bold; }
+    .download-btn {
+      display: inline-block; padding: 10px 20px; margin: 20px 0;
+      background-color: #0366d6; color: #fff; text-decoration: none;
+      border-radius: 5px; font-weight: bold;
+    }
+    .download-btn:hover { background-color: #024a9b; }
   </style>
 </head>
 <body>
-  <h1>경력 기술서</h1>
-  <p>여기에 LaTeX로 작성했던 내용들을 HTML 태그(<p>, <h2>, <ul><li> 등)로 변환해서 붙여넣어야 합니다.</p>
 
-  <a href="resume.pdf" target="_blank">📄 PDF 다운로드</a>
+  <h1>경력 기술서</h1>
+  <p>
+    <strong>Github:</strong> YourGithubID |
+    <strong>Email:</strong> <a href="mailto:YourEmail@gmail.com">YourEmail@gmail.com</a> |
+    <strong>Mobile:</strong> (+82) 010-XXXX-XXXX
+  </p>
+
+  <!-- PDF 다운로드 버튼 -->
+  <a href="resume.pdf" class="download-btn" target="_blank">📄 PDF 다운로드</a>
+
+  <div class="project">
+    <h2>1. 다채움</h2>
+    <p><strong>소속:</strong> (주) [회사 이름] (2020.01 - PRESENT)</p>
+    <p><strong>주요 내용:</strong> (회사 제품 설명, 주요 기능, 기술 스택, 본인 역할 등)</p>
+    <p><strong>주요 성과:</strong> 작업1, 작업2, 작업3</p>
+
+    <div class="subproject">
+      <h3>1.1 딥러닝 기반 동물 분류 학습</h3>
+      <p>50가지 이상의 동물을 영상으로 분류하는 시스템 개발, 90% 이상의 정확도 달성.</p>
+      <p class="tech">사용 기술: Python, Selenium</p>
+    </div>
+
+    <div class="subproject">
+      <h3>1.2 분산 컴퓨팅을 이용한 자동 신경망 학습</h3>
+      <p>다수 GPU 장비를 활용한 분산 학습, 학습 속도 크게 향상.</p>
+      <p class="tech">사용 기술: Apache Spark, TFX, CUDA</p>
+    </div>
+
+    <div class="subproject">
+      <h3>1.3 모델 검증 자동화</h3>
+      <p>Jenkins + GitHub Actions 기반 CI/CD 파이프라인으로 모델 정확도 검증 자동화.</p>
+      <p class="tech">사용 기술: Jenkins, GitHub Actions, PyTorch</p>
+    </div>
+  </div>
+
+  <div class="project">
+    <h2>2. [프로젝트 이름]</h2>
+    <p><strong>소속:</strong> [회사 이름] (2020.12 - PRESENT)</p>
+    <p><strong>주요 내용:</strong> [목적, 방법론, 결과와 임팩트]</p>
+    <p class="tech">사용 기술: [기술1], [기술2], [기술3]</p>
+  </div>
+
+  <div class="project">
+    <h2>3. [프로젝트 이름]</h2>
+    <p><strong>소속:</strong> [회사 이름] (2020.12 - PRESENT)</p>
+    <p><strong>주요 내용:</strong> [목적, 방법론, 결과와 임팩트]</p>
+    <p class="tech">사용 기술: [기술1], [기술2], [기술3]</p>
+  </div>
+
+  <div class="project">
+    <h2>4. [프로젝트 이름]</h2>
+    <p><strong>소속:</strong> [회사 이름] (2020.12 - PRESENT)</p>
+    <p><strong>주요 내용:</strong> [목적, 방법론, 결과와 임팩트]</p>
+    <p class="tech">사용 기술: [기술1], [기술2], [기술3]</p>
+  </div>
+
+  <div class="project">
+    <h2>5. [프로젝트 이름]</h2>
+    <p><strong>소속:</strong> [회사 이름] (2020.12 - PRESENT)</p>
+    <p><strong>주요 내용:</strong> [목적, 방법론, 결과와 임팩트]</p>
+    <p class="tech">사용 기술: [기술1], [기술2], [기술3]</p>
+  </div>
+
 </body>
 </html>
