@@ -44,7 +44,7 @@ jobs:
           git commit -m "Auto-build PDF from LaTeX" || echo "⚠️ No changes to commit"
           git push
 
-          - name: Show LaTeX log
-  run: |
-    cat resume.log || true
+      - name: Show LaTeX log
+        run: |
+          cat resume.log || true
 
