@@ -1,35 +1,20 @@
-name: Build LaTeX to PDF
+- name: Compile LaTeX (XeLaTeX for Korean)
+  uses: xu-cheng/latex-action@v3
+  with:
+    root_file: resume.tex       # <-- 실제 파일명
+    latexmk_use_xelatex: true
 
-on:
-  push:
-    paths:
-      - '*.tex'     # .tex 파일이 수정될 때만 동작
-      - .github/workflows/latex.yml
+- name: Upload PDF artifact
+  uses: actions/upload-artifact@v3
+  with:
+    name: resume-pdf
+    path: resume.pdf            # <-- 결과물 파일명도 맞춰주기
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Set up LaTeX
-        uses: xu-cheng/latex-action@v3
-        with:
-          root_file: resume.tex   # 여기에 실제 tex 파일 이름
-
-      - name: Upload PDF artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: resume-pdf
-          path: resume.pdf
-
-      - name: Commit generated PDF
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "GitHub Actions"
-          mv resume.pdf ./resume.pdf
-          git add resume.pdf
-          git commit -m "Auto-build PDF from LaTeX" || echo "No changes to commit"
-          git push
+- name: Commit generated PDF
+  run: |
+    git config --local user.email "github-actions[bot]@users.noreply.github.com"
+    git config --local user.name "GitHub Actions"
+    mv resume.pdf ./resume.pdf
+    git add resume.pdf
+    git commit -m "Auto-build PDF from LaTeX" || echo "No changes to commit"
+    git push
