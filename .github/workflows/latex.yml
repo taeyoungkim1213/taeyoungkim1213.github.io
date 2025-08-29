@@ -16,8 +16,15 @@ jobs:
       - name: Compile LaTeX with XeLaTeX
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: resume.tex     # 실제 tex 파일명
+          root_file: resume.tex   # 실제 tex 파일명
           latexmk_use_xelatex: true
+
+      - name: Check generated files
+        run: |
+          echo "📂 현재 디렉토리 파일 목록:"
+          ls -lh
+          echo "resume.pdf 존재 여부 확인:"
+          test -f resume.pdf && echo "✅ resume.pdf 생성됨" || echo "❌ resume.pdf 없음"
 
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v3
@@ -29,6 +36,10 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "GitHub Actions"
+
+          echo "📦 resume.pdf 파일 크기 확인:"
+          ls -lh resume.pdf || echo "❌ resume.pdf 없음"
+
           git add resume.pdf
-          git commit -m "Auto-build PDF from LaTeX" || echo "No changes to commit"
+          git commit -m "Auto-build PDF from LaTeX" || echo "⚠️ No changes to commit"
           git push
