@@ -11,12 +11,12 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4   # 최신 버전
 
       - name: Compile LaTeX with XeLaTeX
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: resume.tex   # 실제 tex 파일명
+          root_file: resume.tex
           latexmk_use_xelatex: true
 
       - name: Check generated files
@@ -27,7 +27,7 @@ jobs:
           test -f resume.pdf && echo "✅ resume.pdf 생성됨" || echo "❌ resume.pdf 없음"
 
       - name: Upload PDF artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4   # <-- 여기 v4 로 변경
         with:
           name: resume-pdf
           path: resume.pdf
