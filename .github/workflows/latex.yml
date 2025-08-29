@@ -10,12 +10,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
       - name: Compile LaTeX with XeLaTeX
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: resume.tex   # 실제 파일명
+          root_file: resume.tex     # 실제 .tex 파일 이름
           latexmk_use_xelatex: true
 
       - name: Upload PDF artifact
