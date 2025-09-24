@@ -1,10 +1,8 @@
 %-------------------------
-% Resume in Latex
-% Author : ChatGPT based on your Word doc
+% Resume in LaTeX
 %-------------------------
 
 \documentclass[a4paper,11pt]{article}
-
 
 \usepackage{kotex} % 한글 사용
 \usepackage[margin=1in]{geometry}
@@ -23,97 +21,133 @@
 \begin{document}
 
 \begin{center}
-    {\LARGE \textbf{경력 기술서}} \\[6pt]
+    {\LARGE \textbf{김태영 경력 기술서}} \\[6pt]
     Email: \href{mailto:kty991213@naver.com}{kty991213@naver.com} \quad
     Mobile: (+82) 010-4032-4803
 \end{center}
 
+\vspace{0.5cm}
 
+\noindent \tech{Java}, \tech{Spring MVC}, \tech{MyBatis/iBatis}, \tech{MariaDB/Oracle/MySQL}, \tech{트랜잭션/동시성}, \tech{보안/SSO}
 
 %-------------------------------------------
 \section{충청북도교육청 다채움 플랫폼 (2024.01 ~ 2025.09, 9명 참여)}
 
-\textbf{소속}: ㈜데이타이음
-
+\textbf{소속}: ㈜데이타이음 \\
 \textbf{프로젝트 소개}:  
-AI 기반 맞춤형 교수·학습 환경을 제공하는 통합 교육 플랫폼.  
-학생 학습 이력을 분석하여 콘텐츠 추천, 체험학습 예약·설문조사·독서 활동·진로 콘텐츠 등을 통합 운영.  
-2023년 시범 운영 후 2024년 전면 개통, 현재 도내 전체 학교에서 활용 중.
+충청북도교육청이 추진한 ‘다채움’은 초·중·고 학생의 학습 이력, 포트폴리오,  
+비인지적 요소(자기조절학습 등)를 통합 관리하고 AI·빅데이터 기반으로 학습 수준 진단과  
+맞춤형 학습을 지원하는 학생 성장 지원 플랫폼.  
+교사·학생·학부모 모두가 참여하는 통합 서비스로 수업 설계 공유, 형성평가, 독서 활동 관리,  
+전자책 서비스, 설문 및 피드백 기능 등을 제공하며 현재 교육청 및 산하기관에서 실제 운영 중.
 
-\textbf{역할}: 백엔드 및 일부 프론트엔드 기능 개발, 유지보수
-
-\textbf{기술 스택}: \tech{Java, Spring Framework, MyBatis, JSP, JavaScript, MariaDB, Oracle, MySQL, Firebase Cloud Messaging, REST API}
-
-\textbf{주요 성과}:
+\textbf{주요 업무}:
 \begin{itemize}[leftmargin=*]
-  \item 로그인 보안 강화: 계정 자동 잠금·휴면 계정 관리, 암호화 적용 → 불법 로그인 시도 관련 문의 대폭 감소
-  \item 설문조사 모듈 개발: 객관식·주관식·파일 업로드형 설문 지원 및 외부 기관 API 연동 → 데이터 무결성 확보
-  \item 투표형·댓글형 게시판, 금칙어 필터링, 푸시 알림, 관리자 페이지 구축 → 업무 효율성 향상
+  \item 관리자 페이지에서 회원 관리, 설문조사 관리, 시스템 알림, 게시판(FAQ·공지사항) 기능 개발
+  \item 회원가입 시 개인정보 암호화 및 비밀번호 초기화 기능 구현 → 보안 강화
+  \item 클래스 모듈 내 알림 기능 개발 및 \tech{Firebase Cloud Messaging(FCM)} 연동 → 모바일 푸시 알림 지원
+  \item 통합회원 모듈에 객관식·주관식·파일 업로드형 설문 기능 개발, API 형태로 외부 기관 제공
+  \item 시스템 전반 유지보수 및 고도화 참여
 \end{itemize}
+
+\textbf{문제}: 모바일 푸시 연동 중 Firebase SDK 인증 설정 오류로 알림 전송이 실패함. \\
+\textbf{해결}: 서비스 계정 키(JSON)를 적용하고 \verb|FirebaseApp.initializeApp()|을 단일 초기화하도록 로직 개선. 초기화 과정을 문서화해 이후 개발/운영 환경에서도 동일하게 적용. \\
+\textbf{성과}:
+\begin{itemize}[leftmargin=*]
+  \item SDK 초기화 오류 해결 → 웹·모바일 간 실시간 알림 제공
+  \item 알림 누락·지연 최소화 → 교사·학생 간 소통 효율성 강화
+  \item 외부 서비스 연동 안정화 경험 확보
+\end{itemize}
+
+\textbf{기술 스택}: \tech{Java, Spring, MyBatis, JSP, MariaDB, Oracle, MySQL, REST API, Swagger, Bcrypt, Firebase Cloud Messaging}
 
 %-------------------------------------------
 \section{경상남도교육청 미래교육원 (2024.03 ~ , 4명 참여)}
 
-\textbf{소속}: ㈜데이타이음
-
+\textbf{소속}: ㈜데이타이음 \\
 \textbf{프로젝트 소개}:  
-경상남도교육청 직속 미래기술 체험 교육문화 기관의 공식 누리집.  
-체험 프로그램 예약, 교육과정 안내, 정보공개, 회원 로그인 기능 제공.  
-교사 및 일반인을 대상으로 다양한 연수 콘텐츠와 유료 결제 기반 프로그램 운영.
+경상남도교육청이 운영하는 ‘미래교육원’은 학생·교직원·학부모 대상의  
+체험 프로그램 예약, 연수 관리, 유료 결제까지 지원하는 통합 플랫폼.  
+예약 신청부터 결제, 알림톡 발송, QR코드 기반 현장 참여 확인 및 퀴즈/점수 부여까지  
+교육 체험 전 과정을 디지털화하여 운영 효율성과 사용자 편의성을 높임.
 
-\textbf{역할}: 백엔드 개발 및 유지보수
-
-\textbf{기술 스택}: \tech{Java, Spring Framework, MyBatis, JSP, MariaDB, Quartz Scheduler, KG이니시스 PG}
-
-\textbf{주요 성과}:
+\textbf{주요 업무}:
 \begin{itemize}[leftmargin=*]
-  \item 회원 관리 자동화: Quartz Scheduler 기반 휴면 회원 자동 삭제 → DB 최적화
-  \item 예약 프로세스 개선: 교사가 프로그램 예약 → 관리자가 승인 및 기간 설정 → 학생이 해당 기간에 수강 신청하도록 프로세스 설계 → 예약 과정 명확화 및 안정적 운영
-  \item QR 코드 기반 점수 부여 시스템: 수강생 출석 및 활동 완료 시 QR 코드 스캔을 통해 자동 점수 부여 → 관리 효율성 향상 및 공정성 확보
-  \item 동시 예약 방지: FOR UPDATE 트랜잭션 적용 → 오버부킹 0건 달성
-  \item 결제 모듈 연동: KG이니시스 PG 연동 및 검증 → 결제 오류율 최소화
+  \item 체험 프로그램 예약/결제 트랜잭션 로직 설계 및 동시성 제어 구현
+  \item 결제 모듈을 \tech{TOSS PG}로 연동하고 결제 검증·콜백 처리 강화
+  \item 예약 완료 및 취소 시 \tech{비즈톡 알림톡} 발송 기능 개발
+  \item QR코드 기반 퀴즈 점수 부여 및 현장 이벤트 처리 기능 개발
+  \item \tech{Quartz}를 활용한 휴면 계정 자동 삭제 구현
+  \item 시스템 전반 유지보수 및 장애 대응 참여
 \end{itemize}
+
+\textbf{문제}: 피크 시간대 동시 예약 처리에서 좌석 초과(오버부킹)와 간헐적 데드락으로 예약 지연 발생. \\
+\textbf{해결}: DB 행 잠금(\verb|SELECT ... FOR UPDATE|)을 적용하여 좌석 동시 잠금. 데드락 발생 시 백오프 기반 재시도 로직을 구현해 안정적 트랜잭션 재실행. \\
+\textbf{성과}:
+\begin{itemize}[leftmargin=*]
+  \item 오버부킹 제거 → 동시예약 시 좌석 초과 0건 달성
+  \item 데드락 상황에서도 예약 안정적 처리 → 서비스 신뢰도 강화
+  \item TOSS 결제 연동 + 비즈톡 알림 도입 → 결제 및 예약 안내 UX 개선
+\end{itemize}
+
+\textbf{기술 스택}: \tech{Java, Spring, MyBatis, JSP, MariaDB, Quartz, TOSS PG, Biztalk}
 
 %-------------------------------------------
 \section{충북 통합 도서관 웹사이트 (2024.01 ~ , 3명 참여)}
 
-\textbf{소속}: ㈜데이타이음
-
+\textbf{소속}: ㈜데이타이음 \\
 \textbf{프로젝트 소개}:  
-도내 교육도서관을 통합 운영하는 공공 플랫폼.  
-자료 검색·대출·예약·독서 프로그램 신청·전자도서관 이용 제공.  
-모바일 앱(충북도서관 톡톡)과 연동해 예약·대출·알림 기능 지원
+충청북도 내 20개 교육도서관을 통합해  
+도서 검색, 예약, 대출, 전자도서관 서비스를 제공하는 통합 사이트.  
+사용자는 한 계정으로 모든 도서관 이용 가능하며, 체험 프로그램 예약까지 통합 제공.
 
-\textbf{역할}: 백엔드 개발 및 유지보수
+\textbf{주요 업무}:
+\begin{itemize}[leftmargin=*]
+  \item \textbf{일일 도서관 체험 예약 캘린더} 개발 (달력에서 날짜별 프로그램 조회·예약 가능)
+  \item 회원·도서 예약/대출 기능 유지보수 및 개선
+  \item 느린 SQL 쿼리 수정 및 검색 속도 개선
+  \item 운영 중 발생하는 오류 해결 및 기능 추가
+\end{itemize}
+
+\textbf{문제}: 체험 프로그램 일정이 목록 형태로만 제공돼 원하는 날짜 예약 가능 여부 확인이 불편함. \\
+\textbf{해결}: 캘린더 UI 도입 → 날짜별 프로그램 표시, 달력에서 바로 예약 가능. 검색 인덱스 추가 및 중복 조회 제거로 속도 개선. \\
+\textbf{성과}:
+\begin{itemize}[leftmargin=*]
+  \item 달력 기반 예약 기능 → 사용자 편의성 향상
+  \item 월 1,000건 이상의 체험 예약 안정적 처리
+  \item 검색 응답 속도 수 초 → 1초 이내로 단축
+\end{itemize}
 
 \textbf{기술 스택}: \tech{Java, Spring MVC, iBatis, JSP, OracleDB}
-
-\textbf{주요 성과}:
-\begin{itemize}[leftmargin=*]
-  \item 서비스 운영 및 유지보수: 20개 도서관 통합 관리 → 안정적 운영
-  \item 예약 시스템 개선: 월 1,000건 이상 예약 안정적 처리 → 사용자 편의성 대폭 향상
-  \item 게시판 기능 고도화: 댓글 익명·비밀글 옵션 추가 → 커뮤니티 활용도 증가
-\end{itemize}
 
 %-------------------------------------------
 \section{알콩 플랫폼 (2025.07 ~ , 6명 참여)}
 
-\textbf{소속}: ㈜데이타이음
-
+\textbf{소속}: ㈜데이타이음 \\
 \textbf{프로젝트 소개}:  
-충청북도 다채움 플랫폼과 유사한 구조를 가진 AI 기반 교수·학습 통합 플랫폼.  
-예약·설문·게시판·회원 관리 등 통합 기능 제공.  
-보안 인증(CSAP) 획득을 목표로 개발 중.
+AI 기반 학습 통합 플랫폼으로 학습 관리·콘텐츠·분석 기능을 제공하며,  
+현재 \tech{SCAP 보안인증}을 준비 중.
 
-\textbf{역할}: 백엔드 개발, 시큐어코딩 적용, 보안 인증 대응 
-
-\textbf{기술 스택}: \tech{Java, Spring Framework, MyBatis, JSP, JavaScript, MariaDB, Oracle, MySQL}
-
-\textbf{주요 성과}:
+\textbf{주요 업무}:
 \begin{itemize}[leftmargin=*]
-  \item 시큐어코딩 적용: SQL Injection, XSS, CSRF 차단 로직 적용 → 보안 준수율 100\% 확보
-  \item CSAP 인증 준비: CSAP 1차 검증 통과, 현재 최종 인증 목표 진행 중
-  \item 플랫폼 고도화: 다채움 경험 기반 모듈 재설계 → 재사용성 및 운영 효율 강화
+  \item SCAP(보안인증) 대응을 위한 취약점 점검 및 패치 수행
+  \item CODE-RAY 활용 내부 진단 → 취약점 수정 → 재검사 반복
+  \item 시큐어 코딩(입력 검증·출력 이스케이프·CSRF 대응) 적용 및 공통 모듈 정리
+  \item 감리 대응 및 보안 이행 관리
 \end{itemize}
+
+\textbf{성과}:
+\begin{itemize}[leftmargin=*]
+  \item 정기 스캔·조치로 현재 취약점 0건 유지 (감리 진행 중)
+  \item 보안 조치 표준화 → 패치·검증 속도 향상 및 유지보수 부담 경감
+\end{itemize}
+
+\textbf{나의 역할}:
+\begin{itemize}[leftmargin=*]
+  \item 취약점 진단·재현·패치 주도 및 감리 대응 창구 역할
+  \item 보안 가이드 작성 및 팀 교육 지원
+\end{itemize}
+
+\textbf{기술 스택}: \tech{Java, Spring, MyBatis, JSP, MariaDB, Oracle, MySQL, 보안 스캐너}
 
 \end{document}
