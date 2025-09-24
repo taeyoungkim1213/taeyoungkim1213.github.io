@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>경력 기술서</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Noto Sans KR', sans-serif; margin: 40px; line-height: 1.6; background: #f5f6fa; }
+    h1, h2, h3 { color: #222; }
+    header { text-align:center; margin-bottom:40px; }
+    header h1 { margin-bottom:10px; }
+    .project {
+      margin-bottom: 30px;
+      padding: 25px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .project h2 {
+      margin-top: 0;
+      font-size: 1.4em;
+      color: #0366d6;
+    }
+    .sub-title { font-weight: bold; margin-top: 12px; display: block; }
+    .tech { color: #0366d6; font-weight: bold; }
+    ul { margin: 8px 0 15px 20px; }
+    ul li { margin-bottom: 6px; }
+
+        .project {
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.subproject h3 {
+  margin-top: 15px;
+  color: #444;
+}
+
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>경력 기술서</h1>
+  <p>Email: <a href="mailto:kty991213@naver.com">kty991213@naver.com</a> | 
+     Mobile: (+82) 010-4032-4803</p>
+
+     <a href="resume.pdf" class="download-btn" target="_blank">📄 PDF 다운로드</a>
+</header>
+
+
+
+<!-- 다채움 -->
+<div class="project">
+  <h2>충청북도교육청 다채움 플랫폼 (2024.01 ~ 2025.09, 9명 참여)</h2>
+  <span class="sub-title">소속</span>
+  <p>㈜데이타이음</p>
+  <span class="sub-title">프로젝트 소개</span>
+  <p>AI 기반 맞춤형 교수·학습 환경을 제공하는 통합 교육 플랫폼. 학생 학습 이력을 분석하여 콘텐츠 추천, 체험학습 예약·설문조사·독서 활동·진로 콘텐츠 등을 통합 운영. 2023년 시범 운영 후 2024년 전면 개통, 현재 도내 전체 학교에서 활용 중.</p>
+  <span class="sub-title">역할</span>
+  <p>백엔드 및 일부 프론트엔드 기능 개발, 유지보수</p>
+  <span class="sub-title">기술 스택</span>
+  <p class="tech">Java, Spring Framework, MyBatis, JSP, JavaScript, MariaDB, Oracle, MySQL, Firebase Cloud Messaging, REST API</p>
+  <span class="sub-title">주요 성과</span>
+  <ul>
+    <li>로그인 보안 강화: 계정 자동 잠금·휴면 계정 관리, 암호화 적용 → 불법 로그인 시도 관련 문의 대폭 감소</li>
+    <li>설문조사 모듈 개발: 객관식·주관식·파일 업로드형 설문 지원 및 외부 기관 API 연동 → 데이터 무결성 확보</li>
+    <li>투표형·댓글형 게시판, 금칙어 필터링, 푸시 알림, 관리자 페이지 구축 → 업무 효율성 향상</li>
+  </ul>
+</div>
+
+<!-- 미래교육원 -->
+<div class="project">
+  <h2>경상남도교육청 미래교육원 (2024.03 ~ , 4명 참여)</h2>
+  <span class="sub-title">소속</span>
+  <p>㈜데이타이음</p>
+  <span class="sub-title">프로젝트 소개</span>
+  <p>경상남도교육청 직속 미래기술 체험 교육문화 기관의 공식 누리집. 체험 프로그램 예약, 교육과정 안내, 정보공개, 회원 로그인 기능 제공. 교사 및 일반인을 대상으로 다양한 연수 콘텐츠와 유료 결제 기반 프로그램 운영.</p>
+  <span class="sub-title">역할</span>
+  <p>백엔드 개발 및 유지보수</p>
+  <span class="sub-title">기술 스택</span>
+  <p class="tech">Java, Spring Framework, MyBatis, JSP, MariaDB, Quartz Scheduler, KG이니시스 PG</p>
+  <span class="sub-title">주요 성과</span>
+  <ul>
+    <li>회원 관리 자동화: Quartz Scheduler 기반 휴면 회원 자동 삭제 → DB 최적화</li>
+    <li>예약 프로세스 개선: 교사가 프로그램 예약 → 관리자가 승인 및 기간 설정 → 학생이 해당 기간에 수강 신청하도록 프로세스 설계 → 예약 과정 명확화 및 안정적 운영</li>
+    <li>QR 코드 기반 점수 부여 시스템: 수강생 출석 및 활동 완료 시 QR 코드 스캔을 통해 자동 점수 부여 → 관리 효율성 향상 및 공정성 확보</li>
+    <li>동시 예약 방지: FOR UPDATE 트랜잭션 적용 → 오버부킹 0건 달성</li>
+    <li>결제 모듈 연동: KG이니시스 PG 연동 및 검증 → 결제 오류율 최소화</li>
+  </ul>
+</div>
+
+<!-- 충북 통합 도서관 -->
+<div class="project">
+  <h2>충북 통합 도서관 웹사이트 (2024.01 ~ , 3명 참여)</h2>
+  <span class="sub-title">소속</span>
+  <p>㈜데이타이음</p>
+  <span class="sub-title">프로젝트 소개</span>
+  <p>도내 교육도서관을 통합 운영하는 공공 플랫폼. 자료 검색·대출·예약·독서 프로그램 신청·전자도서관 이용 제공. 모바일 앱(충북도서관 톡톡)과 연동해 예약·대출·알림 기능 지원.</p>
+  <span class="sub-title">역할</span>
+  <p>백엔드 개발 및 유지보수</p>
+  <span class="sub-title">기술 스택</span>
+  <p class="tech">Java, Spring MVC, iBatis, JSP, OracleDB</p>
+  <span class="sub-title">주요 성과</span>
+  <ul>
+    <li>서비스 운영 및 유지보수: 20개 도서관 통합 관리 → 안정적 운영</li>
+    <li>예약 시스템 개선: 월 1,000건 이상 예약 안정적 처리 → 사용자 편의성 대폭 향상</li>
+    <li>게시판 기능 고도화: 댓글 익명·비밀글 옵션 추가 → 커뮤니티 활용도 증가</li>
+  </ul>
+</div>
+
+<!-- 알콩 -->
+<div class="project">
+  <h2>알콩 플랫폼 (2025.07 ~ , 6명 참여)</h2>
+  <span class="sub-title">소속</span>
+  <p>㈜데이타이음</p>
+  <span class="sub-title">프로젝트 소개</span>
+  <p>충청북도 다채움 플랫폼과 유사한 구조를 가진 AI 기반 교수·학습 통합 플랫폼. 예약·설문·게시판·회원 관리 등 통합 기능 제공. 보안 인증(CSAP) 획득을 목표로 개발 중.</p>
+  <span class="sub-title">역할</span>
+  <p>백엔드 개발, 시큐어코딩 적용, 보안 인증 대응</p>
+  <span class="sub-title">기술 스택</span>
+  <p class="tech">Java, Spring Framework, MyBatis, JSP, JavaScript, MariaDB, Oracle, MySQL</p>
+  <span class="sub-title">주요 성과</span>
+  <ul>
+    <li>시큐어코딩 적용: SQL Injection, XSS, CSRF 차단 로직 적용 → 보안 준수율 100% 확보</li>
+    <li>CSAP 인증 준비: SCAP 1차 검증 통과, 현재 최종 인증 목표 진행 중</li>
+    <li>플랫폼 고도화: 다채움 경험 기반 모듈 재설계 → 재사용성 및 운영 효율 강화</li>
+  </ul>
+</div>
+
+</body>
+</html>
