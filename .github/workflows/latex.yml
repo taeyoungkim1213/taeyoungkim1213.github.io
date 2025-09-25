@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - "*.tex"
+      - "*.html"
 
 permissions:
   contents: write   # push 권한 부여
