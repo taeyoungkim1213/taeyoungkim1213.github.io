@@ -1,10 +1,9 @@
 %-------------------------
 % Resume in Latex
-% Author : ChatGPT based on your Word doc
+% Author : ChatGPT based on your HTML
 %-------------------------
 
 \documentclass[a4paper,11pt]{article}
-
 
 \usepackage{kotex} % 한글 사용
 \usepackage[margin=1in]{geometry}
@@ -28,92 +27,96 @@
     Mobile: (+82) 010-4032-4803
 \end{center}
 
-
-
 %-------------------------------------------
-\section{충청북도교육청 다채움 플랫폼 (2024.01 ~ 2025.09, 9명 참여)}
+\section{경상남도교육청 미래교육원 (2024.03 ~ Present, 4명)}
 
-\textbf{소속}: ㈜데이타이음
+\textbf{소속}: ㈜데이타이음  
 
 \textbf{프로젝트 소개}:  
-AI 기반 맞춤형 교수·학습 환경을 제공하는 통합 교육 플랫폼.  
-학생 학습 이력을 분석하여 콘텐츠 추천, 체험학습 예약·설문조사·독서 활동·진로 콘텐츠 등을 통합 운영.  
-2023년 시범 운영 후 2024년 전면 개통, 현재 도내 전체 학교에서 활용 중.
+체험 프로그램 예약, 연수 관리, 유료 결제까지 지원하는 통합 플랫폼.  
+예약 신청부터 결제, 알림톡 발송, QR코드 기반 현장 참여 확인 및 퀴즈/점수 부여까지  
+교육 체험 전 과정을 디지털화하여 운영 효율성과 사용자 편의성을 높임.  
 
-\textbf{역할}: 백엔드 및 일부 프론트엔드 기능 개발, 유지보수
+\textbf{기술 스택}: \tech{Java, Spring, MyBatis, JSP, MariaDB, Quartz, TOSS PG, Biztalk}  
 
-\textbf{기술 스택}: \tech{Java, Spring Framework, MyBatis, JSP, JavaScript, MariaDB, Oracle, MySQL, Firebase Cloud Messaging, REST API}
-
-\textbf{주요 성과}:
+\textbf{문제/해결/성과}:
 \begin{itemize}[leftmargin=*]
-  \item 로그인 보안 강화: 계정 자동 잠금·휴면 계정 관리, 암호화 적용 → 불법 로그인 시도 관련 문의 대폭 감소
-  \item 설문조사 모듈 개발: 객관식·주관식·파일 업로드형 설문 지원 및 외부 기관 API 연동 → 데이터 무결성 확보
-  \item 투표형·댓글형 게시판, 금칙어 필터링, 푸시 알림, 관리자 페이지 구축 → 업무 효율성 향상
+  \item \textbf{문제:} 피크 시간대 동시 예약 처리에서 오버부킹과 데드락 발생.
+  \item \textbf{해결:} DB 행 잠금(\texttt{SELECT ... FOR UPDATE}) + 백오프 기반 재시도 로직으로 트랜잭션 안정화. \\
+  → 동시 예약 환경에서는 \textbf{비관적 락(Pessimistic Lock)}이 낙관적 락보다 적합하다고 판단해 채택.
+  \item \textbf{성과:} 오버부킹 0건, 동시 200명 예약 성공률 100\% 유지, 예약 UX와 결제 안정성 개선.
 \end{itemize}
 
 %-------------------------------------------
-\section{경상남도교육청 미래교육원 (2024.03 ~ , 4명 참여)}
+\section{경남교육청 진로교육원 봄봄 플랫폼 (2025.08 ~ Present, 3명)}
 
-\textbf{소속}: ㈜데이타이음
+\textbf{소속}: ㈜데이타이음  
 
 \textbf{프로젝트 소개}:  
-경상남도교육청 직속 미래기술 체험 교육문화 기관의 공식 누리집.  
-체험 프로그램 예약, 교육과정 안내, 정보공개, 회원 로그인 기능 제공.  
-교사 및 일반인을 대상으로 다양한 연수 콘텐츠와 유료 결제 기반 프로그램 운영.
+체험 프로그램 예약·결제·만족도 조사까지 지원하는 통합 플랫폼.  
+사용자 단: 특별 프로그램 예약, 설문, 비회원 휴대폰 인증 예약, 길찾기.  
+관리자 단: 프로그램 관리, 예약 승인/취소, 결제취소, 만족도 통계, 체험실 배정.  
 
-\textbf{역할}: 백엔드 개발 및 유지보수
+\textbf{기술 스택}: \tech{Java, Spring MVC, MyBatis, JSP, MariaDB, 네이버페이 PG, Biztalk, Quartz, 카카오맵 API, 사이렌 휴대폰 인증}  
 
-\textbf{기술 스택}: \tech{Java, Spring Framework, MyBatis, JSP, MariaDB, Quartz Scheduler, KG이니시스 PG}
-
-\textbf{주요 성과}:
+\textbf{문제/해결/성과}:
 \begin{itemize}[leftmargin=*]
-  \item 회원 관리 자동화: Quartz Scheduler 기반 휴면 회원 자동 삭제 → DB 최적화
-  \item 예약 프로세스 개선: 교사가 프로그램 예약 → 관리자가 승인 및 기간 설정 → 학생이 해당 기간에 수강 신청하도록 프로세스 설계 → 예약 과정 명확화 및 안정적 운영
-  \item QR 코드 기반 점수 부여 시스템: 수강생 출석 및 활동 완료 시 QR 코드 스캔을 통해 자동 점수 부여 → 관리 효율성 향상 및 공정성 확보
-  \item 동시 예약 방지: FOR UPDATE 트랜잭션 적용 → 오버부킹 0건 달성
-  \item 결제 모듈 연동: KG이니시스 PG 연동 및 검증 → 결제 오류율 최소화
+  \item \textbf{문제:} 피크 시간대 동시 예약 시 오버부킹, 결제 중복, 승인 지연 가능성.
+  \item \textbf{해결:} DB 행 잠금 + 백오프 기반 재시도 로직으로 동시성 제어. 네이버페이 콜백 검증·트랜잭션 분리로 이중결제 차단. 예약 승인/취소·환불 절차 표준화. \\
+  → 교육청 체험예약 특성상 \textbf{동시성·결제 안정성}을 최우선으로 설계.
+  \item \textbf{성과:} 동시 150명 예약 성공률 100\% 검증, 결제 중복 0건, 길찾기/인증 기능으로 사용자 편의성 향상.
 \end{itemize}
 
 %-------------------------------------------
-\section{충북 통합 도서관 웹사이트 (2024.01 ~ , 3명 참여)}
+\section{충북 통합 도서관 웹사이트 (2024.01 ~ Present, 3명)}
 
-\textbf{소속}: ㈜데이타이음
+\textbf{소속}: ㈜데이타이음  
 
 \textbf{프로젝트 소개}:  
-도내 교육도서관을 통합 운영하는 공공 플랫폼.  
-자료 검색·대출·예약·독서 프로그램 신청·전자도서관 이용 제공.  
-모바일 앱(충북도서관 톡톡)과 연동해 예약·대출·알림 기능 지원
+도내 20개 교육도서관을 하나로 묶어 예약·대출·전자도서관 서비스를 제공하는 통합 사이트.  
+사용자는 한 계정으로 모든 도서관과 체험 예약 서비스를 이용 가능.  
 
-\textbf{역할}: 백엔드 개발 및 유지보수
+\textbf{기술 스택}: \tech{Java, Spring MVC, iBatis, JSP, OracleDB}  
 
-\textbf{기술 스택}: \tech{Java, Spring MVC, iBatis, JSP, OracleDB}
-
-\textbf{주요 성과}:
+\textbf{문제/해결/성과}:
 \begin{itemize}[leftmargin=*]
-  \item 서비스 운영 및 유지보수: 20개 도서관 통합 관리 → 안정적 운영
-  \item 예약 시스템 개선: 월 1,000건 이상 예약 안정적 처리 → 사용자 편의성 대폭 향상
-  \item 게시판 기능 고도화: 댓글 익명·비밀글 옵션 추가 → 커뮤니티 활용도 증가
+  \item \textbf{문제:} 일정이 목록 형태로만 제공돼 예약 가능 여부 확인이 불편.
+  \item \textbf{해결:} 캘린더 UI 도입, 인덱스 추가 및 중복 조회 최소화로 DB 성능 개선.
+  \item \textbf{성과:} 예약 조회 속도 수초 → 1초 이내 단축, 월 1,000건 예약 안정적 처리, 취소/변경 처리 속도 30\% 단축.
 \end{itemize}
 
 %-------------------------------------------
-\section{알콩 플랫폼 (2025.07 ~ , 6명 참여)}
+\section{충청북도교육청 다채움 플랫폼 (2024.01 ~ 2025.09, 9명)}
 
-\textbf{소속}: ㈜데이타이음
+\textbf{소속}: ㈜데이타이음  
 
 \textbf{프로젝트 소개}:  
-충청북도 다채움 플랫폼과 유사한 구조를 가진 AI 기반 교수·학습 통합 플랫폼.  
-예약·설문·게시판·회원 관리 등 통합 기능 제공.  
-보안 인증(CSAP) 획득을 목표로 개발 중.
+AI·빅데이터 기반 학습 지원 플랫폼.  
+학습 이력·포트폴리오 관리, 맞춤형 학습, 수업 공유, 독서 관리, 설문/피드백 기능 제공.  
 
-\textbf{역할}: 백엔드 개발, 시큐어코딩 적용, 보안 인증 대응 
+\textbf{기술 스택}: \tech{Java, Spring, MyBatis, JSP, MariaDB/Oracle/MySQL, REST API, Swagger, Bcrypt, Firebase Cloud Messaging}  
 
-\textbf{기술 스택}: \tech{Java, Spring Framework, MyBatis, JSP, JavaScript, MariaDB, Oracle, MySQL}
+\textbf{문제/해결/성과}:
+\begin{itemize}[leftmargin=*]
+  \item \textbf{문제:} Firebase SDK 인증 오류로 모바일 푸시 실패.
+  \item \textbf{해결:} 서비스 계정 키 적용, \texttt{FirebaseApp.initializeApp()} 단일 초기화, 문서화로 재발 방지.
+  \item \textbf{성과:} 알림 실패율 15\% → 0\% 개선, 설문 API 안정화, 실시간 알림 동기화로 신뢰도 회복.
+\end{itemize}
+
+%-------------------------------------------
+\section{알콩 플랫폼 (2025.07 ~ Present, 6명)}
+
+\textbf{소속}: ㈜데이타이음  
+
+\textbf{프로젝트 소개}:  
+AI 기반 학습 통합 플랫폼, SCAP 보안인증 대응 중.  
+
+\textbf{기술 스택}: \tech{Java, Spring, MyBatis, JSP, MariaDB/Oracle/MySQL, 보안 스캐너}  
 
 \textbf{주요 성과}:
 \begin{itemize}[leftmargin=*]
-  \item 시큐어코딩 적용: SQL Injection, XSS, CSRF 차단 로직 적용 → 보안 준수율 100\% 확보
-  \item CSAP 인증 준비: CSAP 1차 검증 통과, 현재 최종 인증 목표 진행 중
-  \item 플랫폼 고도화: 다채움 경험 기반 모듈 재설계 → 재사용성 및 운영 효율 강화
+  \item CODE-RAY 기반 취약점 진단·패치 반복, 시큐어코딩 적용 → 취약점 0건 유지.
+  \item 보안 조치 표준화로 패치·검증 속도 40\% 단축, 감리 대응 신뢰성 확보.
 \end{itemize}
 
 \end{document}
