@@ -52,12 +52,12 @@
 사용자 단: 예약, 설문, 비회원 휴대폰 인증, 길찾기.  
 관리자 단: 프로그램 관리, 예약 승인/취소, 결제취소, 통계, 체험실 배정.  
 
-\textbf{기술 스택}: \tech{Java, Spring MVC, MyBatis, JSP, MariaDB, 네이버페이 PG, Biztalk, Quartz, 카카오맵 API, 사이렌 휴대폰 인증}  
+\textbf{기술 스택}: \tech{Java, Spring MVC, MyBatis, JSP, MariaDB, NHN KCP, Biztalk, Quartz, 카카오맵 API, 사이렌 휴대폰 인증}  
 
 \textbf{문제/해결/성과}:
 \begin{itemize}[leftmargin=*]
   \item \textbf{문제:} 피크 시간대 동시 예약 시 오버부킹·결제 중복·승인 지연 발생 가능성.
-  \item \textbf{해결:} DB 행 잠금 + 백오프 기반 재시도 로직 적용. 네이버페이 콜백 검증 및 트랜잭션 분리로 이중결제 차단. 예약 승인/취소·환불 절차 표준화.  
+  \item \textbf{해결:} DB 행 잠금 + 백오프 기반 재시도 로직 적용. NHN KCP 콜백 검증 및 트랜잭션 분리로 이중결제 차단. 예약 승인/취소·환불 절차 표준화.  
   → 교육청 체험예약 특성상 \textbf{동시성·결제 안정성}을 최우선으로 설계.
   \item \textbf{성과:} 개발/테스트 환경에서 동시 150명 예약 성공률 100\% 검증, 중복 결제 0건, 길찾기/본인인증 기능으로 사용자 편의성 향상.
 \end{itemize}
