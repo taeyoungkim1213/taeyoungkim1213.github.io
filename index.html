@@ -2,255 +2,300 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <title>경력 기술서</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --ink:#1f2937; --muted:#6b7280; --brand:#2563eb; --bg:#f5f6fa; --card:#ffffff; --ok:#16a34a; --warn:#d97706;
-    }
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:'Noto Sans KR',sans-serif;line-height:1.7}
-    .wrap{max-width:980px;margin:40px auto;padding:0 20px}
-    header{text-align:center;margin-bottom:28px}
-    header h1{margin:0 0 8px;font-weight:700}
-    header p{margin:4px 0;color:var(--muted)}
-    .chip{display:inline-block;padding:6px 10px;border:1px solid #e5e7eb;border-radius:999px;background:#fff;color:#374151;font-size:12px;margin:2px}
-    .section-title{font-size:20px;margin:28px 0 12px;font-weight:700;color:#111827}
-    .card{background:var(--card);border:1px solid #e5e7eb;border-radius:12px;padding:20px 22px;margin:18px 0;box-shadow:0 2px 5px rgba(0,0,0,.04)}
-    .proj h2{margin:0 0 6px;font-size:18px;color:var(--brand)}
-    .meta{font-size:13px;color:var(--muted);margin-bottom:10px}
-    .row{display:grid;grid-template-columns:160px 1fr;gap:12px;margin:8px 0}
-    .row .k{font-weight:600;color:#374151}
-    .row .v{color:#111827}
-    ul.tight{margin:6px 0 0 18px}
-    ul.tight li{margin:2px 0}
-    .badge{display:inline-block;background:#eef2ff;color:#4338ca;border:1px solid #c7d2fe;border-radius:6px;padding:2px 6px;font-size:12px;margin-left:6px}
-    .problem{color:#b91c1c;font-weight:600}
-    .solution{color:#2563eb;font-weight:600}
-    .result{color:#16a34a;font-weight:600}
-    .page-break{break-before:page}
-    @media print{
-      body{background:#fff}
-      .card{box-shadow:none}
-      .page-break{break-before:page}
-      a::after{content:" (" attr(href) ")";font-size:11px;color:#6b7280}
-    }
-  </style>
+  <title>홈</title>
+
+  <link href="css/common.css" rel="stylesheet">
+
+  <!-- ★ jQuery 먼저 로딩 -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- 이후에 제이쿼리 사용하는 스크립트 로드 -->
+  <script src="js/common.js"></script>
 </head>
 <body>
-  <div class="wrap">
-
-    <!-- 상단 연락처 & 담당업무 요약 (지원서 “담당업무” 복붙용) -->
-    <header>
-      <h1>경력 기술서</h1>
-      <!-- <p>Email: <a href="mailto:kty991213@naver.com">kty991213@naver.com</a> · Mobile: (+82) 010-4032-4803</p> -->
-      <div>
-        <span class="chip">Java</span><span class="chip">Spring MVC</span><span class="chip">MyBatis/iBatis</span>
-        <span class="chip">MariaDB/Oracle/MySQL</span><span class="chip">트랜잭션/동시성</span><span class="chip">보안/SSO</span>
-      </div>
-      <!-- <a href="resume.pdf" class="download-btn" target="_blank">📄 PDF로 다운로드</a> -->
-    </header>
-
-    <!-- 프로젝트 1: 다채움 -->
-    <div class="card proj">
-      <h2>충청북도교육청 다채움 플랫폼 <span class="badge">2024.01 ~ 2025.09 · 9명</span></h2>
-      <div class="meta">· AI 기반 교수·학습 통합 플랫폼</div>
-
-      <div class="row">
-        <div class="k">프로젝트 소개</div>
-        <div class="v">
-          충청북도교육청이 추진한 <b>‘다채움’</b>은 초·중·고 학생의 학습 이력, 포트폴리오, 
-          비인지적 요소(자기조절학습 등)를 통합 관리하고 AI·빅데이터 기반으로 학습 수준 진단과 
-          맞춤형 학습을 지원하는 <b>학생 성장 지원 플랫폼</b>입니다.<br/>
-          교사·학생·학부모 모두가 참여하는 통합 서비스로, 수업 설계 공유, 형성평가, 독서 활동 관리, 
-          전자책 서비스, 설문 및 피드백 기능 등을 제공하며 현재 교육청 및 산하기관에서 실제 운영 중입니다.
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="k">주요 업무</div>
-        <div class="v">
-          • 관리자 페이지에서 회원 관리, 설문조사 관리, 시스템 알림, 게시판(FAQ·공지사항) 기능을 개발<br/>
-          • 회원가입 시 개인정보 암호화 및 비밀번호 초기화 기능을 구현하여 보안 수준 강화<br/>
-          • 클래스 모듈 내 알림 기능을 개발하고 <b>Firebase Cloud Messaging(FCM)</b>을 연동하여 모바일 푸시 알림 지원<br/>
-          • 통합회원 모듈에서 객관식·주관식·파일 업로드형 설문 기능을 개발하고 외부 기관 및 내부 클래스 모듈에 API 형태로 제공<br/>
-          • 시스템 전반 유지보수 및 고도화 작업에 지속적으로 참여
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="k">문제/해결/성과</div>
-        <div class="v">
-          <p class="problem">문제</p>
-          모바일 푸시 연동 중 Firebase SDK 인증 설정 오류로 알림 전송이 실패하는 문제가 발생했습니다.<br/><br/>
-
-          <p class="solution">해결</p>
-          • 서비스 계정 키(JSON)를 프로젝트 리소스에 적용하고, `FirebaseApp.initializeApp()`을 안전하게 단일 초기화하도록 초기화 로직을 개선하여 인증 문제를 해결했습니다.<br/>
-          • 초기화 과정과 관련 설정을 문서화해 이후 개발/운영 환경에서도 동일한 방식으로 적용하도록 했습니다.<br/><br/>
-
-          <p class="result">성과</p>
-          • 웹·모바일 간 실시간 알림 동기화를 달성하여 공지 전달 신뢰도를 회복했습니다.<br/>
-          • 외부기관 연동 설문 API를 안정화하여 시스템 활용도를 높였습니다.<br/>
-          <!-- <em>(면접 한줄 요약) Firebase 인증 문제를 초기화 로직 개선으로 해결하고, 설문 API 연동을 안정화했습니다.</em> -->
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="k">기술 스택</div>
-        <div class="v">
-          Java, Spring, MyBatis, JSP, MariaDB/Oracle/MySQL, REST API, Swagger, Bcrypt, Firebase Cloud Messaging
-        </div>
-      </div>
+      
+<div class="wrap">
+  
+  <div id="menu">
+    <div class="hamburger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
     </div>
 
+    <div class="menu-inner">
+      
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#career">Career</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
 
-    <!-- 프로젝트 2: 미래교육원 -->
-    <div class="card proj">
-      <h2>경상남도교육청 미래교육원 <span class="badge">2024.03 ~ (진행) · 4명</span></h2>
-      <div class="meta">·체험 프로그램 예약/연수/결제 운영 시스템</div>
-
-      <div class="row">
-        <div class="k">프로젝트 소개</div>
-        <div class="v">
-          경상남도교육청이 운영하는 <b>‘미래교육원’</b>은 학생·교직원·학부모 대상의 
-          체험 프로그램 예약, 연수 관리, 유료 결제까지 지원하는 통합 플랫폼입니다.<br/>
-          예약 신청부터 결제, 알림톡 발송, QR코드 기반 현장 참여 확인 및 퀴즈/점수 부여까지 
-          교육 체험 전 과정을 디지털화하여 운영 효율성과 사용자 편의성을 높이고 있습니다.
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="k">주요 업무</div>
-        <div class="v">
-          • 체험 프로그램 예약/결제 트랜잭션 로직 설계 및 동시성 제어 구현<br/>
-          • 결제 모듈을 <b>TOSS PG</b>로 연동하고 결제 검증·콜백 처리 강화<br/>
-          • 예약 완료 및 취소 시 <b>비즈톡 알림톡</b> 발송 기능 개발<br/>
-          • QR코드 기반 퀴즈 점수 부여 및 현장 이벤트 처리 기능 개발<br/>
-          • Quartz를 활용한 휴면 계정 자동 삭제 구현<br/>
-          • 시스템 전반 유지보수 및 장애 대응 참여 중
-        </div>
-      </div>
-
-        <div class="row">
-          <div class="k">문제/해결/성과</div>
-          <div class="v">
-            <p class="problem">문제</p>
-            피크 시간대 동시 예약 처리에서 좌석이 초과(오버부킹)되고 간헐적 데드락으로 예약 지연이 발생했습니다.<br/><br/>
-
-            <p class="solution">해결</p>
-            • DB 행 잠금(`SELECT ... FOR UPDATE`)을 적용해 좌석을 동시 잠금하고, 데드락 발생 시 백오프(backoff) 기반으로 재시도(최대 N회)하도록 재시도 로직을 구현하여 트랜잭션을 안정적으로 재실행하도록 했습니다.<br/><br/>
-
-            <p class="result">성과</p>
-            • 오버부킹을 제거하여 동시예약 시 좌석 초과 <b>0건</b>을 달성했습니다.<br/>
-            • 데드락 발생 상황에서도 예약이 안정적으로 처리되도록 만들어 서비스 신뢰도를 높였습니다.<br/>
-            • TOSS 연동과 비즈톡 알림 도입으로 결제 및 예약 안내 UX를 개선했습니다.<br/>
-            <!-- <em>(면접 한줄 요약) FOR UPDATE와 백오프 재시도로 오버부킹을 근본 차단했고, 예약 안정성을 확보했습니다.</em> -->
-          </div>
-        </div>
-
-      <div class="row">
-        <div class="k">기술 스택</div>
-        <div class="v">
-          Java, Spring, MyBatis, JSP, MariaDB, Quartz, TOSS PG, Biztalk
-        </div>
-      </div>
     </div>
-
-
-    <!-- 프로젝트 3: 충북 통합 도서관 -->
-    <div class="card proj">
-      <h2>충북 통합 도서관 웹사이트 <span class="badge">2024.01 ~ (진행) · 3명</span></h2>
-      <div class="meta">·도내 20개 교육도서관 통합 · 예약·대출·전자도서관</div>
-
-      <div class="row">
-        <div class="k">프로젝트 소개</div>
-        <div class="v">
-          충청북도 내 20개 교육도서관을 하나로 묶어,
-          <b>도서 검색, 예약, 대출, 전자도서관</b> 서비스를 제공하는 통합 사이트입니다.<br/>
-          사용자는 한 계정으로 모든 도서관을 이용할 수 있고, 
-          체험 프로그램 예약과 도서관 서비스까지 통합된 환경에서 이용할 수 있습니다.
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="k">주요 업무</div>
-        <div class="v">
-          • <b>일일 도서관 체험 예약 캘린더</b> 개발 (달력에서 날짜별 프로그램 조회·예약 가능)<br/>
-          • 회원·도서 예약/대출 기능 유지보수 및 개선<br/>
-          • 느린 SQL 쿼리 수정 및 검색 속도 개선<br/>
-          • 운영 중 발생하는 오류 해결 및 기능 추가
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="k">문제/해결/성과</div>
-        <div class="v">
-          <p class="problem">문제</p>
-          체험 프로그램 일정이 목록 형태로만 제공되어 사용자가 원하는 날짜의 예약 가능 여부를 빠르게 확인하기 어려웠습니다.<br/><br/>
-
-          <p class="solution">해결</p>
-          • 캘린더 UI를 도입해 날짜별로 프로그램을 보여주고, 달력에서 바로 예약할 수 있게 기능을 구현했습니다.<br/>
-          • 자주 쓰이는 검색에 인덱스를 추가하고 중복 조회를 줄여 조회 속도를 개선했습니다.<br/><br/>
-
-          <p class="result">성과</p>
-          • 사용자가 달력에서 바로 예약할 수 있게 되어 사용 편의성이 크게 향상되었습니다.<br/>
-          • 월 1,000건 이상의 체험 예약을 안정적으로 처리하고, 검색 응답을 수초에서 <b>1초 이내</b>로 단축했습니다.<br/>
-          <!-- <em>(면접 한줄 요약) 신입 때 캘린더형 예약 기능을 직접 설계·구현하며 실무형 SQL 튜닝 경험을 쌓았습니다.</em> -->
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="k">기술 스택</div>
-        <div class="v">
-          Java, Spring MVC, iBatis, JSP, OracleDB
-        </div>
-      </div>
-    </div>
-
-    <!-- 프로젝트 4: 알콩 (간단 버전) -->
-    <div class="card proj">
-      <h2>알콩 플랫폼 <span class="badge">2025.07 ~ (진행) · 6명</span></h2>
-      <div class="meta">·AI 기반 학습 통합 · SCAP 인증 대응</div>
-
-      <div class="row">
-        <div class="k">프로젝트 소개</div>
-        <div class="v">
-          AI 기반 학습 통합 플랫폼으로 학습 관리·콘텐츠·분석 기능을 제공하며, 
-          현재 SCAP 보안인증을 준비하고 있습니다. <br/><br/>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="k">주요 업무</div>
-        <div class="v">
-          SCAP(보안인증) 대응을 위한 취약점 점검 및 패치 수행<br/>
-          CODE-RAY 를 이용한 내부 진단 → 취약점 수정 → 재검사 반복<br/>
-          시큐어 코딩(입력 검증·출력 이스케이프·CSRF 대응) 적용 및 공통 모듈 정리<br/>
-          감리 대응 및 보안 이행 관리 <br/><br/>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="k">성과</div>
-        <div class="v">
-          정기 스캔과 조치로 현재 <b>취약점 0건 유지</b> 상태(감리 진행 중)<br/>
-          보안 조치 표준화로 패치·검증 속도 향상 및 유지보수 부담 경감 <br/><br/>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="k">나의 역할</div>
-        <div class="v">
-          취약점 진단·재현·패치 주도 및 감리 대응 창구 역할<br/>
-          보안 가이드 작성 및 팀 교육 지원 <br/><br/>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="k">기술 스택</div>
-        <div class="v">Java, Spring, MyBatis, JSP, MariaDB/Oracle/MySQL, 보안 스캐너</div>
-      </div>
-    </div>
-
+  
+  
+    
+    <svg version="1.1" id="blob"xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <path id="blob-path" d="M60,500H0V0h60c0,0,20,172,20,250S60,900,60,500z"/>
+    </svg>
   </div>
+
+  <!-- 섹션들 시작 -->
+  <section id="home" class="section">
+  <h2>안녕하세요, 백엔드 개발자 김태영입니다.</h2>
+  <p>
+    공공 교육 플랫폼에서 <b>예약·결제·알림·보안</b> 기능을 주로 개발해왔으며,<br/>
+    <b>트랜잭션 안정성</b>과 <b>실사용 환경에서의 문제 해결</b>에 강점이 있습니다.
+  </p>
+  </section>
+
+
+  <section id="about" class="section">
+  <h2>About Me</h2>
+  <p>
+    Java / Spring 기반의 백엔드 개발자로,<br/>
+    교육청·공공기관 플랫폼에서 <b>실제 운영되는 서비스</b>를 개발·유지보수해왔습니다.
+  </p>
+
+  <ul class="about-list">
+    <li>✔ 체험 프로그램 예약 / 결제 / 알림 시스템 개발</li>
+    <li>✔ 동시 예약 환경에서의 오버부킹·데드락 문제 해결</li>
+    <li>✔ 관리자 페이지 및 설문·게시판·회원 관리 기능 구현</li>
+    <li>✔ SSO·보안 취약점 대응 및 운영 환경 개선</li>
+  </ul>
+  </section>
+
+  <section id="career" class="section">
+  <h2>Career</h2>
+
+  <div class="project-card">
+    <div class="project-header">
+      <h3>경상남도교육청 미래교육원</h3>
+      <span class="period">2024.03 ~ 진행중</span>
+    </div>
+    <p class="summary">체험 프로그램 예약·결제·알림 운영 시스템</p>
+    <ul>
+      <li>동시 예약 오버부킹 해결 (DB 락 + 재시도)</li>
+      <li>TOSS PG 결제 검증/콜백 처리</li>
+      <li>알림톡 발송 자동화</li>
+      <li>Redis 기반 예약 처리 경험</li>
+    </ul>
+  </div>
+
+  <div class="project-card">
+    <div class="project-header">
+      <h3>충청북도교육청 다채움 플랫폼</h3>
+      <span class="period">2024.01 ~ 2025.09</span>
+    </div>
+    <p class="summary">AI 기반 교수·학습 통합 플랫폼</p>
+    <ul>
+      <li>관리자/설문 기능 개발 및 외부 연동 API 제공</li>
+      <li>FCM 푸시 알림 연동</li>
+      <li>보안 조치 및 운영 이슈 대응</li>
+    </ul>
+  </div>
+</section>
+
+
+
+
+<!-- 프로젝트 -->
+<section id="projects" class="section">
+  <h2>Projects</h2>
+
+  <div class="project-card project-with-image">
+
+  
+    <div class="project-content">
+      <div class="project-header">
+        <h3>BLUE HORIZON</h3>
+        <span class="period">팀 프로젝트</span>
+      </div>
+
+      <p class="meta">
+      개발 기간 : 2023.11.14 ~ 2023.11.29 (15일) · 인원 : 4명
+    </p>
+
+      <p class="summary">
+        여행 정보 조회 및 예약을 주제로 한 웹 서비스 팀 프로젝트
+      </p>
+
+      <ul>
+        <li>
+          여행 상품 조회, 상세 페이지, 예약 흐름을 포함한
+          <b>전반적인 웹 서비스 구조 설계</b>
+        </li>
+        <li>
+          <b>Spring MVC + JSP</b> 기반으로
+          Controller / Service / Mapper 구조 구현
+        </li>
+        <li>
+          MyBatis를 활용한 DB 연동 및
+          게시판·목록·상세 조회 기능 개발
+        </li>
+        <li>
+          팀 프로젝트에서
+          <b>마이페이지, 후기게시판</b> 담당
+        </li>
+      </ul>
+
+      <p class="tech-tags">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JS</span>
+        <span>jQuery</span>
+        <span>Tomcat 9</span>
+        <span>Spring MVC</span>
+        <span>JSP</span>
+        <span>Git</span>
+        <span>MyBatis</span>
+        <span>MySQL</span>
+        <span>IntelliJ IDEA</span>
+      </p>
+
+      <p>
+        <a href="https://github.com/taeyoungkim1213/tripTeam" target="_blank">
+          GitHub 링크 →
+        </a>
+      </p>
+    </div>
+
+    <div class="project-thumb">
+      <img src="img/블루호라이즌.png" alt="BLUE HORIZON 메인 화면">
+    </div>
+  </div>
+</section>
+
+
+
+
+
+  <!-- 스킬 -->
+  <section id="skills" class="section">
+  <h2>Skills</h2>
+
+  <div class="skill-block">
+  <h3>[ Backend / Language ]</h3>
+  <ul>
+    <li>
+      <b>Java</b> – MVC 기반 웹 애플리케이션 개발,
+      트랜잭션 처리, 예외 흐름 설계 및 공통 로직 구현
+    </li>
+    <li>
+      <b>Spring / Spring MVC</b> –
+      Controller · Service · ServiceImpl · Mapper 구조로
+      역할 분리된 아키텍처 설계 및 개발
+    </li>
+    <li>
+      <b>MyBatis / iBatis</b> –
+      Mapper XML 기반 SQL 관리,
+      동적 SQL 작성 및 복잡한 조회 쿼리 성능 개선
+    </li>
+  </ul>
+</div>
+
+
+  <div class="skill-block">
+  <h3>[ Frontend (JSP 기반) ]</h3>
+  <ul>
+    <li>
+      <b>JSP / JSTL / EL</b> –
+      Model2 기반 화면 구성,
+      서버 데이터 바인딩 및 조건부 렌더링 처리
+    </li>
+    <li>
+      <b>JavaScript / jQuery</b> –
+      Ajax 통신, 이벤트 처리, UI 동작 구현
+    </li>
+    <li>
+      <b>HTML / CSS</b> –
+      기존 퍼블리싱 구조 이해 및 유지보수
+    </li>
+  </ul>
+</div>
+
+
+  <div class="skill-block">
+  <h3>[ Database ]</h3>
+  <ul>
+    <li>
+      <b>MariaDB / Oracle / MySQL</b> –
+      스키마 설계, 인덱스 구성,
+      트랜잭션 제어 및 데이터 정합성 관리
+    </li>
+    <li>
+      <b>PL/SQL</b> –
+      프로시저·함수 작성,
+      배치성 로직 및 데이터 처리
+    </li>
+  </ul>
+</div>
+
+
+  <div class="skill-block">
+  <h3>[ Infra / Deployment ]</h3>
+  <ul>
+     <li>
+      <b>Redis</b> –
+      예약 요청 처리 시
+      캐시 및 임시 데이터 저장소로 활용
+    </li>
+    <li>
+      <b>성능 개선</b> –
+      DB 직접 접근을 줄여
+      피크 시간대 예약 처리 성능 개선
+    </li>
+    <li>
+      <b>Quartz Scheduler</b> –
+      예약 자동 취소, 정기 작업 등
+      스케줄링 로직 구현
+    </li>
+  </ul>
+</div>
+
+
+  <div class="skill-block">
+  <h3>[ Security ]</h3>
+  <ul>
+    <li>
+      <b>웹 보안 취약점 점검</b> –
+      CODE-RAY 도구를 활용한
+      입력 검증, 출력 이스케이프 등 취약점 분석 및 조치
+    </li>
+    <li>
+      <b>SSO / 인증</b> –
+      인증 연동 및 운영 환경 이슈 대응,
+      보안 설정 개선
+    </li>
+    <li>
+      <b>CSAP 대응 경험</b> –
+      웹 취약점 조치 및 보안 가이드 기반
+      인증 대응 작업 수행
+    </li>
+  </ul>
+</div>
+
+
+  <div class="skill-block">
+    <h3>[ Tools ]</h3>
+    <ul>
+      <li>Git / SVN / DBeaver / IntelliJ / Eclipse</li>
+    </ul>
+  </div>
+  </section>
+
+
+<section id="contact" class="section">
+  <h2>Contact</h2>
+  <p>Email : kty991213@naver.com</p>
+  <p>GitHub : <a href="https://github.com/taeyoungkim1213" target="_blank">https://github.com/taeyoungkim1213</a></p>
+  </section>
+
+
+</div>
+
 </body>
 </html>
