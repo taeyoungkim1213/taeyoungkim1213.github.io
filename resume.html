@@ -4,225 +4,208 @@
   <meta charset="UTF-8" />
   <title>경력 기술서</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
-
   <link href="css/resume.css" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-  <div class="wrap">
+<div class="wrap">
 
-    <!-- 상단 연락처 & 담당업무 요약 (지원서 “담당업무” 복붙용) -->
-    <header>
-      <h1>경력 기술서</h1>
-      <!-- <p>Email: <a href="mailto:kty991213@naver.com">kty991213@naver.com</a> · Mobile: (+82) 010-4032-4803</p> -->
-      <div>
-        <span class="chip">Java</span><span class="chip">Spring MVC</span><span class="chip">MyBatis/iBatis</span>
-        <span class="chip">MariaDB/Oracle/MySQL</span><span class="chip">트랜잭션/동시성</span><span class="chip">보안/SSO</span>
+  <!-- 헤더 -->
+  <header>
+    <h1>경력 기술서</h1>
+
+    <div class="card">
+      <h2>경력 요약</h2>
+      
+      <div class="v">
+        <b>에이아이데이타</b> 소속으로 공공 교육 플랫폼 및 대규모 운영 서비스에서<br/>
+        <b>신규 기능 개발 · 기존 시스템 고도화 · 운영 안정화</b>를 담당해온
+        Java/Spring 기반 백엔드 개발자입니다.<br/><br/>
+
+        예약·결제·설문·알림·통계·CMS 등
+        <b>실사용자가 많은 핵심 기능을 직접 설계·구현·운영</b>했으며,<br/>
+        외부 API 연동, 배치/스케줄러, 보안(CSAP) 인증 대응까지
+        <b>서비스 전반의 품질과 안정성을 책임지는 역할</b>을 수행해왔습니다.
       </div>
-      <!-- <a href="resume.pdf" class="download-btn" target="_blank">📄 PDF로 다운로드</a> -->
-    </header>
+    </div>
 
-    <!-- 프로젝트 1: 다채움 -->
-    <div class="card proj">
-      <h2>충청북도교육청 다채움 플랫폼 <span class="badge">2024.01 ~ 2025.09 · 9명</span></h2>
-      <div class="meta">· AI 기반 교수·학습 통합 플랫폼</div>
+  </header>
+
+    <div class="card">
+      <h2 style="text-align: center;">핵심 역량 · 핵심 성과</h2>
 
       <div class="row">
-        <div class="k">프로젝트 소개</div>
+        <div class="k">핵심 역량</div>
         <div class="v">
-          충청북도교육청이 추진한 <b>‘다채움’</b>은 초·중·고 학생의 학습 이력, 포트폴리오, 
-          비인지적 요소(자기조절학습 등)를 통합 관리하고 AI·빅데이터 기반으로 학습 수준 진단과 
-          맞춤형 학습을 지원하는 <b>학생 성장 지원 플랫폼</b>입니다.<br/>
-          교사·학생·학부모 모두가 참여하는 통합 서비스로, 수업 설계 공유, 형성평가, 독서 활동 관리, 
-          전자책 서비스, 설문 및 피드백 기능 등을 제공하며 현재 교육청 및 산하기관에서 실제 운영 중입니다.
+          <ul class="tight">
+            <li>운영을 고려한 예약/결제/설문/알림/통계/CMS 기능 설계</li>
+            <li>트랜잭션, 락, 재시도(backoff)를 활용한 동시성·정합성 제어</li>
+            <li>결제(PG), 인증, 알림(SMS/알림톡/FCM), 화상(vClass) 등 외부 API 연동</li>
+            <li>CODE-RAY 기반 취약점 점검 및 시큐어 코딩 적용 (CSAP 인증 대응)</li>
+          </ul>
         </div>
       </div>
 
       <div class="row">
-        <div class="k">주요 업무</div>
+        <div class="k">핵심 성과</div>
         <div class="v">
-          • 관리자 페이지에서 회원 관리, 설문조사 관리, 시스템 알림, 게시판(FAQ·공지사항) 기능을 개발<br/>
-          • 회원가입 시 개인정보 암호화 및 비밀번호 초기화 기능을 구현하여 보안 수준 강화<br/>
-          • 클래스 모듈 내 알림 기능을 개발하고 <b>Firebase Cloud Messaging(FCM)</b>을 연동하여 모바일 푸시 알림 지원<br/>
-          • 통합회원 모듈에서 객관식·주관식·파일 업로드형 설문 기능을 개발하고 외부 기관 및 내부 클래스 모듈에 API 형태로 제공<br/>
-          • 시스템 전반 유지보수 및 고도화 작업에 지속적으로 참여
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="k">문제/해결/성과</div>
-        <div class="v">
-          <p class="problem">문제</p>
-          모바일 푸시 연동 중 Firebase SDK 인증 설정 오류로 알림 전송이 실패하는 문제가 발생했습니다.<br/><br/>
-
-          <p class="solution">해결</p>
-          • 서비스 계정 키(JSON)를 프로젝트 리소스에 적용하고, `FirebaseApp.initializeApp()`을 안전하게 단일 초기화하도록 초기화 로직을 개선하여 인증 문제를 해결했습니다.<br/>
-          • 초기화 과정과 관련 설정을 문서화해 이후 개발/운영 환경에서도 동일한 방식으로 적용하도록 했습니다.<br/><br/>
-
-          <p class="result">성과</p>
-          • 웹·모바일 간 실시간 알림 동기화를 달성하여 공지 전달 신뢰도를 회복했습니다.<br/>
-          • 외부기관 연동 설문 API를 안정화하여 시스템 활용도를 높였습니다.<br/>
-          <!-- <em>(면접 한줄 요약) Firebase 인증 문제를 초기화 로직 개선으로 해결하고, 설문 API 연동을 안정화했습니다.</em> -->
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="k">기술 스택</div>
-        <div class="v">
-          Java, Spring, MyBatis, JSP, MariaDB/Oracle/MySQL, REST API, Swagger, Bcrypt, Firebase Cloud Messaging
+          <ul class="tight">
+            <li><b>동시 예약 환경에서 오버부킹 제거 및 서비스 안정성 확보</b></li>
+            <li>설문 기능 공통화 및 외부 연계(API/문서화)로 유지보수성 향상</li>
+            <li>웹·모바일 알림 통합으로 공지 전달 신뢰도 개선</li>
+            <li><b>예약–결제–인증–알림까지 엔드투엔드 서비스 플로우 구축</b></li>
+          </ul>
         </div>
       </div>
     </div>
 
+  
 
-    <!-- 프로젝트 2: 미래교육원 -->
-    <div class="card proj">
-      <h2>경상남도교육청 미래교육원 <span class="badge">2024.03 ~ (진행) · 4명</span></h2>
-      <div class="meta">·체험 프로그램 예약/연수/결제 운영 시스템</div>
+  <!-- 경남진로 -->
+  <div class="card proj">
+    <h2>경남진로 플랫폼 <span class="badge">2025.07 ~ 2026.01 · 2명</span></h2>
+    <div class="meta">에이아이데이타 · 체험 프로그램 예약 · 결제 · 알림 통합 시스템</div>
 
-      <div class="row">
-        <div class="k">프로젝트 소개</div>
-        <div class="v">
-          경상남도교육청이 운영하는 <b>‘미래교육원’</b>은 학생·교직원·학부모 대상의 
-          체험 프로그램 예약, 연수 관리, 유료 결제까지 지원하는 통합 플랫폼입니다.<br/>
-          예약 신청부터 결제, 알림톡 발송, QR코드 기반 현장 참여 확인 및 퀴즈/점수 부여까지 
-          교육 체험 전 과정을 디지털화하여 운영 효율성과 사용자 편의성을 높이고 있습니다.
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="k">주요 업무</div>
-        <div class="v">
-          • 체험 프로그램 예약/결제 트랜잭션 로직 설계 및 동시성 제어 구현<br/>
-          • 결제 모듈을 <b>TOSS PG</b>로 연동하고 결제 검증·콜백 처리 강화<br/>
-          • 예약 완료 및 취소 시 <b>비즈톡 알림톡</b> 발송 기능 개발<br/>
-          • QR코드 기반 퀴즈 점수 부여 및 현장 이벤트 처리 기능 개발<br/>
-          • Quartz를 활용한 휴면 계정 자동 삭제 구현<br/>
-          • 시스템 전반 유지보수 및 장애 대응 참여 중
-        </div>
-      </div>
-
-        <div class="row">
-          <div class="k">문제/해결/성과</div>
-          <div class="v">
-            <p class="problem">문제</p>
-            피크 시간대 동시 예약 처리에서 좌석이 초과(오버부킹)되고 간헐적 데드락으로 예약 지연이 발생했습니다.<br/><br/>
-
-            <p class="solution">해결</p>
-            • DB 행 잠금(`SELECT ... FOR UPDATE`)을 적용해 좌석을 동시 잠금하고, 데드락 발생 시 백오프(backoff) 기반으로 재시도(최대 N회)하도록 재시도 로직을 구현하여 트랜잭션을 안정적으로 재실행하도록 했습니다.<br/><br/>
-
-            <p class="result">성과</p>
-            • 오버부킹을 제거하여 동시예약 시 좌석 초과 <b>0건</b>을 달성했습니다.<br/>
-            • 데드락 발생 상황에서도 예약이 안정적으로 처리되도록 만들어 서비스 신뢰도를 높였습니다.<br/>
-            • TOSS 연동과 비즈톡 알림 도입으로 결제 및 예약 안내 UX를 개선했습니다.<br/>
-            <!-- <em>(면접 한줄 요약) FOR UPDATE와 백오프 재시도로 오버부킹을 근본 차단했고, 예약 안정성을 확보했습니다.</em> -->
-          </div>
-        </div>
-
-      <div class="row">
-        <div class="k">기술 스택</div>
-        <div class="v">
-          Java, Spring, MyBatis, JSP, MariaDB, Quartz, TOSS PG, Biztalk
-        </div>
+    <div class="row">
+      <div class="k">역할과 책임</div>
+      <div class="v">
+        예약·결제·인증·알림·통계를 하나의 사용자 흐름으로 연결하는
+        <b>백엔드 핵심 기능 설계 및 구현</b>
       </div>
     </div>
 
-
-    <!-- 프로젝트 3: 충북 통합 도서관 -->
-    <div class="card proj">
-      <h2>충북 통합 도서관 웹사이트 <span class="badge">2024.01 ~ (진행) · 3명</span></h2>
-      <div class="meta">·도내 20개 교육도서관 통합 · 예약·대출·전자도서관</div>
-
-      <div class="row">
-        <div class="k">프로젝트 소개</div>
-        <div class="v">
-          충청북도 내 20개 교육도서관을 하나로 묶어,
-          <b>도서 검색, 예약, 대출, 전자도서관</b> 서비스를 제공하는 통합 사이트입니다.<br/>
-          사용자는 한 계정으로 모든 도서관을 이용할 수 있고, 
-          체험 프로그램 예약과 도서관 서비스까지 통합된 환경에서 이용할 수 있습니다.
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="k">주요 업무</div>
-        <div class="v">
-          • <b>일일 도서관 체험 예약 캘린더</b> 개발 (달력에서 날짜별 프로그램 조회·예약 가능)<br/>
-          • 회원·도서 예약/대출 기능 유지보수 및 개선<br/>
-          • 느린 SQL 쿼리 수정 및 검색 속도 개선<br/>
-          • 운영 중 발생하는 오류 해결 및 기능 추가
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="k">문제/해결/성과</div>
-        <div class="v">
-          <p class="problem">문제</p>
-          체험 프로그램 일정이 목록 형태로만 제공되어 사용자가 원하는 날짜의 예약 가능 여부를 빠르게 확인하기 어려웠습니다.<br/><br/>
-
-          <p class="solution">해결</p>
-          • 캘린더 UI를 도입해 날짜별로 프로그램을 보여주고, 달력에서 바로 예약할 수 있게 기능을 구현했습니다.<br/>
-          • 자주 쓰이는 검색에 인덱스를 추가하고 중복 조회를 줄여 조회 속도를 개선했습니다.<br/><br/>
-
-          <p class="result">성과</p>
-          • 사용자가 달력에서 바로 예약할 수 있게 되어 사용 편의성이 크게 향상되었습니다.<br/>
-          • 월 1,000건 이상의 체험 예약을 안정적으로 처리하고, 검색 응답을 수초에서 <b>1초 이내</b>로 단축했습니다.<br/>
-          <!-- <em>(면접 한줄 요약) 신입 때 캘린더형 예약 기능을 직접 설계·구현하며 실무형 SQL 튜닝 경험을 쌓았습니다.</em> -->
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="k">기술 스택</div>
-        <div class="v">
-          Java, Spring MVC, iBatis, JSP, OracleDB
-        </div>
+    <div class="row">
+      <div class="k">문제·배경</div>
+      <div class="v">
+        예약, 결제, 인증, 알림이 분리된 구조로 인해
+        운영 오류와 사용자 혼선이 잦았음
       </div>
     </div>
 
-    <!-- 프로젝트 4: 알콩 (간단 버전) -->
-    <div class="card proj">
-      <h2>알콩 플랫폼 <span class="badge">2025.07 ~ (진행) · 6명</span></h2>
-      <div class="meta">·AI 기반 학습 통합 · SCAP 인증 대응</div>
-
-      <div class="row">
-        <div class="k">프로젝트 소개</div>
-        <div class="v">
-          AI 기반 학습 통합 플랫폼으로 학습 관리·콘텐츠·분석 기능을 제공하며, 
-          현재 SCAP 보안인증을 준비하고 있습니다. <br/><br/>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="k">주요 업무</div>
-        <div class="v">
-          SCAP(보안인증) 대응을 위한 취약점 점검 및 패치 수행<br/>
-          CODE-RAY 를 이용한 내부 진단 → 취약점 수정 → 재검사 반복<br/>
-          시큐어 코딩(입력 검증·출력 이스케이프·CSRF 대응) 적용 및 공통 모듈 정리<br/>
-          감리 대응 및 보안 이행 관리 <br/><br/>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="k">성과</div>
-        <div class="v">
-          정기 스캔과 조치로 현재 <b>취약점 0건 유지</b> 상태(감리 진행 중)<br/>
-          보안 조치 표준화로 패치·검증 속도 향상 및 유지보수 부담 경감 <br/><br/>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="k">나의 역할</div>
-        <div class="v">
-          취약점 진단·재현·패치 주도 및 감리 대응 창구 역할<br/>
-          보안 가이드 작성 및 팀 교육 지원 <br/><br/>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="k">기술 스택</div>
-        <div class="v">Java, Spring, MyBatis, JSP, MariaDB/Oracle/MySQL, 보안 스캐너</div>
+    <div class="row">
+      <div class="k">접근 방법</div>
+      <div class="v">
+        • 예약 → 결제 → 완료/취소 → 알림 발송을 <b>상태 기반 플로우</b>로 재설계<br/>
+        • NHN KCP 결제 결과 검증 및 콜백 처리로 결제 정합성 확보<br/>
+        • 비즈사이렌 본인인증, 비즈톡 SMS, vClass 화상 API 연동<br/>
+        • 지역/식당/프로그램 관리 등 운영을 고려한 CMS 기능 병행 개발
       </div>
     </div>
 
+    <div class="row">
+      <div class="k">결과·성과</div>
+      <div class="v">
+        • 예약부터 완료까지 끊기지 않는 엔드투엔드 플로우 구축<br/>
+        • 운영팀 수작업 감소 및 장애 문의 감소로 운영 효율 개선
+      </div>
+    </div>
   </div>
+
+  <!-- 다채움 -->
+  <div class="card proj">
+    <h2>충청북도교육청 다채움 플랫폼 <span class="badge">2024.01 ~ 2025.12 · 9명</span></h2>
+    <div class="meta">에이아이데이타 · AI 기반 교수·학습 통합 플랫폼</div>
+
+    <div class="row">
+      <div class="k">역할과 책임</div>
+      <div class="v">
+        포탈·클래스에서 사용하는
+        <b>설문·알림·게시판·학습 기능 설계 및 개발</b>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="k">문제·배경</div>
+      <div class="v">
+        설문과 알림 기능이 서비스별로 분산되어
+        확장성과 유지보수가 어려운 구조
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="k">접근 방법</div>
+      <div class="v">
+        • 포탈 설문을 공통 모듈로 설계하고 클래스에서 재사용 가능하도록 구조 개선<br/>
+        • 외부 서비스(늘봄) 연계를 위한 설문 API 제공 및 문서화<br/>
+        • 웹·모바일 알림 요구를 통합해 FCM 기반 푸시 도입<br/>
+        • 댓글/대댓글을 포함한 게시판 구조 개선
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="k">결과·성과</div>
+      <div class="v">
+        • 설문 기능 공통화로 신규 요구사항 대응 속도 향상<br/>
+        • 알림 통합으로 사용자 인지율 및 서비스 활용도 증가
+      </div>
+    </div>
+  </div>
+
+  <!-- 미래교육원 -->
+  <div class="card proj">
+    <h2>경상남도교육청 미래교육원 <span class="badge">2024.03 ~ (진행) · 4명</span></h2>
+    <div class="meta">에이아이데이타 · 체험 프로그램 예약·결제 운영 시스템</div>
+
+    <div class="row">
+      <div class="k">역할과 책임</div>
+      <div class="v">
+        동시 예약 환경에서의 <b>트랜잭션 및 좌석 정합성 제어</b>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="k">문제·배경</div>
+      <div class="v">
+        피크 시간대 동시 요청으로 오버부킹 및 데드락 발생
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="k">접근 방법</div>
+      <div class="v">
+        • SELECT FOR UPDATE로 핵심 자원(좌석) 기준 행 잠금 적용<br/>
+        • 트랜잭션 범위 재정의 및 데드락 대비 백오프 재시도 로직 구현
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="k">결과·성과</div>
+      <div class="v">
+        • 오버부킹 0건 달성<br/>
+        • 데드락 상황에서도 안정적인 예약 처리 구조 확보
+      </div>
+    </div>
+  </div>
+
+  <!-- 알콩 -->
+  <div class="card proj">
+    <h2>알콩 플랫폼 <span class="badge">2025.07 ~ 2026.01 · 6명</span></h2>
+    <div class="meta">에이아이데이타 · AI 기반 학습 플랫폼 · CSAP 인증 통과</div>
+
+    <div class="row">
+      <div class="k">역할과 책임</div>
+      <div class="v">
+        CSAP 인증 대응을 위한 <b>웹 취약점 진단 및 조치 주도</b>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="k">접근 방법</div>
+      <div class="v">
+        • CODE-RAY 결과 기반 취약점 유형 분석 및 우선순위 설정<br/>
+        • 입력 검증·출력 이스케이프·CSRF 대응 등 시큐어 코딩 공통 적용<br/>
+        • 조치 후 재스캔을 반복하여 재발 방지 체계 구축
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="k">결과·성과</div>
+      <div class="v">
+        • CSAP 인증 <b>통과 완료</b><br/>
+        • 취약점 0건 상태 유지 및 보안 품질 표준화
+      </div>
+    </div>
+  </div>
+
+</div>
 </body>
 </html>

@@ -9,9 +9,25 @@
     .chip{display:inline-block;padding:6px 10px;border:1px solid #e5e7eb;border-radius:999px;background:#fff;color:#374151;font-size:12px;margin:2px}
     .section-title{font-size:20px;margin:28px 0 12px;font-weight:700;color:#111827}
     .card{background:var(--card);border:1px solid #e5e7eb;border-radius:12px;padding:20px 22px;margin:18px 0;box-shadow:0 2px 5px rgba(0,0,0,.04)}
-    .proj h2{margin:0 0 6px;font-size:18px;color:var(--brand)}
-    .meta{font-size:13px;color:var(--muted);margin-bottom:10px}
-    .row{display:grid;grid-template-columns:160px 1fr;gap:12px;margin:8px 0}
+    .proj h2{
+  margin:0 0 6px;
+  font-size:19px;
+  font-weight:700;
+  color:var(--brand);
+}
+    .meta{
+  font-size:13px;
+  color:var(--muted);
+  margin-bottom:14px;
+}
+    .row{
+  display:grid;
+  grid-template-columns:160px 1fr;
+  gap:12px;
+  margin:10px 0;
+  align-items:start;
+}
+
     .row .k{font-weight:600;color:#374151}
     .row .v{color:#111827}
     ul.tight{margin:6px 0 0 18px}
