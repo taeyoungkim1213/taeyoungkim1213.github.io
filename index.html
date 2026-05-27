@@ -63,6 +63,70 @@
   <div class="project-card">
     <div class="project-content">
       <div class="project-header">
+        <h3>선착순 티켓 발급 API (동시성 제어)</h3>
+        <span class="period">개인 프로젝트</span>
+      </div>
+
+      <p>
+        <a href="https://github.com/taeyoungkim1213/ticketing-fifo-concurrency" target="_blank">
+          GitHub Repository →
+        </a>
+      </p>
+
+      <p class="meta">
+        기간 : 2025.12.27 ~ 2026.01.21 <br>
+        Java 11 · Spring Boot · Redis(Redisson) · JPA · QueryDSL · MySQL · Docker
+      </p>
+
+      <p class="summary">
+        멀티 서버 환경에서 <b>대규모 동시 요청의 정확성과 무결성</b>을 보장하는<br>
+        선착순 티켓 발급 백엔드 시스템
+      </p>
+
+      <ul>
+        <li>
+          DB Exclusive Lock의 핫스팟·데드락 문제를 파악하고,
+          <b>동시성 제어를 Redis 분산락으로 이관</b>
+        </li>
+        <li>
+          Redisson 분산락으로 재고 확인 → 중복 검증 → DB 감소의
+          <b>원자적 처리 흐름</b> 설계
+        </li>
+        <li>
+          JUnit 기반 통합 테스트로 15스레드 × 10,000건 동시 요청 시나리오를 재현하고
+          <b>중복 발급 0건 · 초과 발급 0건</b> 검증
+        </li>
+        <li>
+          <b>헥사고날 아키텍처</b> 기반으로
+          도메인·인프라 분리 설계
+        </li>
+      </ul>
+
+      <p class="tech-tags">
+        <span>Java</span>
+        <span>Spring Boot</span>
+        <span>Hexagonal Architecture</span>
+        <span>Redis</span>
+        <span>Redisson</span>
+        <span>JPA</span>
+        <span>QueryDSL</span>
+        <span>MySQL</span>
+        <span>Docker</span>
+        <span>Concurrency</span>
+      </p>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- 개인 프로젝트2 -->
+  <section id="projects2" class="section">
+  <h2>Project2</h2>
+
+  <div class="project-card">
+    <div class="project-content">
+      <div class="project-header">
         <h3>날씨 조건 알림 서비스</h3>
         <span class="period">개인 프로젝트 (진행 중)</span>
       </div>
@@ -114,69 +178,6 @@
         <span>FCM</span>
         <span>Docker</span>
         <span>GitHub Actions</span>
-      </p>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- 개인 프로젝트2 -->
-  <section id="projects2" class="section">
-  <h2>Project2</h2>
-
-  <div class="project-card">
-    <div class="project-content">
-      <div class="project-header">
-        <h3>선착순 티켓 발급 API (동시성 제어)</h3>
-        <span class="period">개인 프로젝트</span>
-      </div>
-
-      <p>
-        <a href="https://github.com/taeyoungkim1213/ticketing-fifo-concurrency" target="_blank">
-          GitHub Repository →
-        </a>
-      </p>
-
-      <p class="meta">
-        기간 : 2025.12.27 ~ 2026.01.21 <br>
-        Java 11 · Spring Boot · Redis(Redisson) · JPA · QueryDSL · MySQL · Docker
-      </p>
-
-      <p class="summary">
-        멀티 서버 환경에서 <b>대규모 동시 요청의 정확성과 무결성</b>을 보장하는<br>
-        선착순 티켓 발급 백엔드 시스템
-      </p>
-
-      <ul>
-        <li>
-          DB Exclusive Lock의 핫스팟·데드락 문제를 파악하고,
-          <b>동시성 제어를 Redis 분산락으로 이관</b>
-        </li>
-        <li>
-          Redisson 분산락으로 재고 확인 → 중복 검증 → DB 감소의
-          <b>원자적 처리 흐름</b> 설계
-        </li>
-        <li>
-          JUnit 기반 통합 테스트로 15스레드 × 10,000건 동시 요청 시나리오를 재현하고
-          <b>중복 발급 0건 · 초과 발급 0건</b> 검증
-        </li>
-        <li>
-          Hexagonal Architecture 기반으로
-          도메인·인프라 분리 설계
-        </li>
-      </ul>
-
-      <p class="tech-tags">
-        <span>Java</span>
-        <span>Spring Boot</span>
-        <span>Redis</span>
-        <span>Redisson</span>
-        <span>JPA</span>
-        <span>QueryDSL</span>
-        <span>MySQL</span>
-        <span>Docker</span>
-        <span>Concurrency</span>
       </p>
 
     </div>
