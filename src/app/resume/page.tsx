@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "경력 기술서 | 김태영",
@@ -163,9 +164,9 @@ export default function ResumePage() {
 
       <div className="r-root">
 
-        <a href="/" className="r-back">
+        <Link href="/" className="r-back">
           ← 포트폴리오로 돌아가기
-        </a>
+        </Link>
 
         {/* ── 헤더 ── */}
         <header className="r-header">
