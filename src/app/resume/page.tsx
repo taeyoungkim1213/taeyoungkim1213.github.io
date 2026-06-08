@@ -208,7 +208,7 @@ export default function ResumePage() {
               <p className="r-section-title">Core Skills</p>
               <div className="r-chips">
                 {["Java", "Spring", "eGovFrame", "MyBatis", "Quartz", "Maven",
-                  "MySQL", "MariaDB", "Redis", "Docker"].map((s) => (
+                  "MySQL", "MariaDB", "Redis"].map((s) => (
                   <span key={s} className="r-chip">{s}</span>
                 ))}
               </div>
