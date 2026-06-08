@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "경력 기술서 | 김태영",
@@ -164,9 +163,9 @@ export default function ResumePage() {
 
       <div className="r-root">
 
-        <Link href="/" className="r-back">
-          ← 포트폴리오로 돌아가기
-        </Link>
+        <a href="/" className="r-back">
+          ← 포트폴리오 보러가기
+        </a>
 
         {/* ── 헤더 ── */}
         <header className="r-header">
@@ -186,7 +185,7 @@ export default function ResumePage() {
 
         {/* ── 경력 요약 ── */}
         <section className="r-section">
-          <p className="r-section-title">Summary (경력 요약)</p>
+          <p className="r-section-title">Summary</p>
           <p className="r-summary">
             <b>에이아이데이타(데이타이음)</b> 소속으로 공공 교육 플랫폼 및 대규모 운영 서비스에서
             신규 기능 개발 · 시스템 고도화 · 운영 안정화를 담당해온 Java/Spring 기반 백엔드
@@ -205,7 +204,7 @@ export default function ResumePage() {
         <section className="r-section">
           <div className="r-section-grid">
             <div>
-              <p className="r-section-title">Core Skills (핵심 역량)</p>
+              <p className="r-section-title">Core Skills</p>
               <div className="r-chips">
                 {["Java", "Spring Boot", "JPA", "QueryDSL", "SQL", "Redis", "MySQL",
                   "Docker", "AWS", "GitHub Actions", "Hexagonal Arch."].map((s) => (
@@ -214,7 +213,7 @@ export default function ResumePage() {
               </div>
             </div>
             <div>
-              <p className="r-section-title">Key Achievements (핵심 성과)</p>
+              <p className="r-section-title">Key Achievements</p>
               <ul className="r-checklist">
                 <li>동시 요청 환경에서 데이터 충돌 없는 처리 구조 구축</li>
                 <li>설문 기능 공통화로 신규 서비스 연계 공수 절감</li>
@@ -227,7 +226,7 @@ export default function ResumePage() {
 
         {/* ── 경력 ── */}
         <section className="r-section">
-          <p className="r-section-title">Experience (경력)</p>
+          <p className="r-section-title">Experience</p>
 
           {/* 미래교육원 */}
           <div className="r-entry">
@@ -238,14 +237,18 @@ export default function ResumePage() {
             <p className="r-entry-meta">에이아이데이타(데이타이음) · 대규모 트래픽 체험예약 플랫폼</p>
 
             <div className="r-row">
-              <span className="r-k">핵심 기여</span>
-              <span className="r-v">피크 시간대 동시 예약 오버부킹 발생 → 트랜잭션·락 전략 재설계로 해결</span>
+              <span className="r-k">담당 역할</span>
+              <span className="r-v">백엔드 2인 중 예약 및 결제 핵심 엔진 담당</span>
+            </div>
+            <div className="r-row">
+              <span className="r-k">문제 상황</span>
+              <span className="r-v">피크 시간대 동시 예약으로 정원을 초과하는 오버부킹이 실서비스에서 발생했습니다. 트랜잭션을 걸었는데도 오버부킹이 계속 일어났고, 조회 시점에 락을 걸어야 한다는 걸 직접 테스트하며 파악했습니다.</span>
             </div>
             <div className="r-row">
               <span className="r-k">해결 방법</span>
               <div className="r-v">
                 <ul className="r-ul">
-                  <li>충돌 빈도 분석 후 낙관적 락 대신 <b>비관적 락(SELECT FOR UPDATE)</b> 채택</li>
+                  <li>충돌 빈도 분석 후 낙관적 락 대신 <b>비관적 락(FOR UPDATE)</b> 채택</li>
                   <li>트랜잭션 범위를 검증부터 생성까지 확장 → 원자적 처리 보장</li>
                   <li>데드락 대비 <b>백오프 기반 재시도 로직</b> 구현</li>
                 </ul>
@@ -264,13 +267,17 @@ export default function ResumePage() {
           <div className="r-entry">
             <div className="r-entry-top">
               <p className="r-entry-name">경남진로교육청 아이꿈봄</p>
-              <span className="r-entry-period">2025.08 – 2026.03 · 2명</span>
+              <span className="r-entry-period">2025.08 – 2026.03 · 3명</span>
             </div>
             <p className="r-entry-meta">에이아이데이타(데이타이음) · 체험 프로그램 예약·결제·알림·CMS</p>
 
             <div className="r-row">
-              <span className="r-k">역할</span>
-              <span className="r-v">예약–결제–안내–관리 전 플로우 설계·구현 및 CMS 개발</span>
+              <span className="r-k">담당 역할</span>
+              <span className="r-v">백엔드 2인 중 예약·결제·외부연동 전담 개발</span>
+            </div>
+            <div className="r-row">
+              <span className="r-k">문제 상황</span>
+              <span className="r-v">예약 후 즉시 결제와 24시간 이내 마이페이지 결제를 모두 지원해야 했고, 예약·결제 상태를 어떻게 설계할지가 가장 큰 고민이었습니다. 또한 PC와 모바일의 결제 API 파라미터 방식이 달랐고, 다중 결제를 지원해야 해서 API 다중 호출 구조가 필요했습니다. 멀티 서버(2대) 환경이라 DB 락만으로는 동시성 제어에 한계가 있었습니다.</span>
             </div>
             <div className="r-row">
               <span className="r-k">주요 구현</span>
@@ -286,8 +293,14 @@ export default function ResumePage() {
               <span className="r-v">NHN KCP 결제 · 비즈사이렌 본인인증 · 비즈톡 SMS · vClass 화상수업</span>
             </div>
             <div className="r-row">
-              <span className="r-k">접근 방법</span>
-              <span className="r-v">주요 단계를 상태 중심으로 정의, 외부 연동 실패 시 재처리 가능한 구조로 설계</span>
+              <span className="r-k">해결 방법</span>
+              <div className="r-v">
+                <ul className="r-ul">
+                  <li>예약 시점에 상태를 <b>대기</b>로 설정하고, 결제 완료 시 예약·결제 상태를 모두 완료로 전환하며, 24시간 경과 시 예약을 자동으로 풀고 결제는 실패로 처리하는 상태 전환 흐름 설계</li>
+                  <li><b>CompletableFuture</b>로 결제 API를 병렬 호출하고 allOf로 전체 완료를 기다린 뒤 결과를 집계하는 구조로 구현</li>
+                  <li>멀티 서버 환경을 고려해 <b>Redisson RLock</b> 기반 Redis 분산락 도입, TTL 기반 자동 해제로 데드락 방지</li>
+                </ul>
+              </div>
             </div>
           </div>
 
@@ -300,12 +313,12 @@ export default function ResumePage() {
             <p className="r-entry-meta">에이아이데이타(데이타이음) · AI 기반 교수·학습 통합 플랫폼</p>
 
             <div className="r-row">
-              <span className="r-k">역할</span>
-              <span className="r-v">설문·알림·게시판·학습 기능 설계 및 개발</span>
+              <span className="r-k">담당 역할</span>
+              <span className="r-v">백엔드 5인 중 설문·알림·게시판 모듈 단독 담당</span>
             </div>
             <div className="r-row">
-              <span className="r-k">문제</span>
-              <span className="r-v">설문·알림이 웹/모바일별로 분산되어 확장성·유지보수 어려움</span>
+              <span className="r-k">문제 상황</span>
+              <span className="r-v">MSA 구조로 운영되는 여러 서비스에 동일한 설문 기능이 각각 중복 구현되어 있어 유지보수가 어려웠습니다. 알림도 웹/모바일별로 분산되어 관리가 복잡했습니다.</span>
             </div>
             <div className="r-row">
               <span className="r-k">해결</span>
@@ -335,8 +348,12 @@ export default function ResumePage() {
             <p className="r-entry-meta">에이아이데이타(데이타이음) · AI 기반 학습 플랫폼 · CSAP 인증</p>
 
             <div className="r-row">
-              <span className="r-k">역할</span>
-              <span className="r-v">CSAP 클라우드 보안 인증 심사 대비 웹 취약점 진단·조치 주도</span>
+              <span className="r-k">담당 역할</span>
+              <span className="r-v">팀 전체 참여, 취약점 진단 및 시큐어 코딩 공통 적용 주도</span>
+            </div>
+            <div className="r-row">
+              <span className="r-k">문제 상황</span>
+              <span className="r-v">CSAP 인증 심사를 앞두고 CODE-RAY 정적 분석 결과 XSS·CSRF·인증 우회 등 다수의 웹 취약점이 검출됐습니다.</span>
             </div>
             <div className="r-row">
               <span className="r-k">접근</span>
