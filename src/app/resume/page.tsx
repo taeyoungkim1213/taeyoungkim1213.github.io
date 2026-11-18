@@ -196,8 +196,12 @@ export default function ResumePage() {
             외부 API 연동, 배치/스케줄러, 보안(CSAP) 인증까지 서비스 전반의 품질과 안정성을
             책임지는 역할을 수행해왔습니다.
             <br /><br />
-            현재는 헥사고날 아키텍처와 컨테이너 기반 배포 환경을 직접 설계·적용하며 아키텍처와
-            인프라 영역까지 역량을 넓혀가고 있습니다.
+            헥사고날 아키텍처와 컨테이너 기반 배포 환경을 직접 설계·적용하며 아키텍처와 인프라
+            영역까지 역량을 넓혀왔고, 현재는 <b>㈜인큐브</b>에서 반도체·디스플레이 제조 운영 관리
+            시스템(MISO)의 품질관리·변경점 관리 모듈을 Spring Boot + Vue.js 기반 풀스택으로
+            개발하고 있습니다. 노후 C# 기반 변경점 관리 시스템을 Java/Spring Boot로 이관해
+            안정화하고, MSSQL·PostgreSQL 다중 DB 환경에서 억 단위 데이터를 다루며 외부 DB →
+            사내 DB 데이터 마이그레이션과 공통 상수 관리 구조 구축을 담당하고 있습니다.
           </p>
         </section>
 
@@ -207,8 +211,8 @@ export default function ResumePage() {
             <div>
               <p className="r-section-title">Core Skills</p>
               <div className="r-chips">
-                {["Java", "Spring", "eGovFrame", "MyBatis", "Quartz", "Maven",
-                  "MySQL", "MariaDB", "Redis"].map((s) => (
+                {["Java", "Spring", "Spring Boot", "eGovFrame", "MyBatis", "Quartz", "Maven",
+                  "Vue.js", "JavaScript", "MSSQL", "PostgreSQL", "MySQL", "MariaDB", "Redis"].map((s) => (
                   <span key={s} className="r-chip">{s}</span>
                 ))}
               </div>
@@ -228,6 +232,30 @@ export default function ResumePage() {
         {/* ── 경력 ── */}
         <section className="r-section">
           <p className="r-section-title">Experience</p>
+
+          {/* 인큐브 */}
+          <div className="r-entry">
+            <div className="r-entry-top">
+              <p className="r-entry-name">제조 운영 관리 시스템 (MISO)</p>
+              <span className="r-entry-period">2026.06 – 재직중</span>
+            </div>
+            <p className="r-entry-meta">㈜인큐브 · 반도체·디스플레이 제조 운영 관리 시스템 · 품질관리·변경점 관리</p>
+
+            <div className="r-row">
+              <span className="r-k">담당 역할</span>
+              <span className="r-v">Spring Boot + Vue.js 기반 품질·변경점 관리 기능 신규 개발 및 유지보수 (풀스택 개발)</span>
+            </div>
+            <div className="r-row">
+              <span className="r-k">주요 업무</span>
+              <div className="r-v">
+                <ul className="r-ul">
+                  <li><b>레거시 이관</b>: 노후화된 C# 기반 변경점 관리 시스템을 Java/Spring Boot + Vue.js 웹 환경으로 이관 및 안정화</li>
+                  <li><b>다중 DB &amp; 데이터 마이그레이션</b>: 억 단위 대용량 데이터를 다루는 MSSQL·PostgreSQL 다중 DB 환경 개발 및 외부 DB → 사내 DB 데이터 마이그레이션 수행</li>
+                  <li><b>공통 상수 관리</b>: 서비스 전반에서 사용하는 공통 상수를 중앙에서 관리할 수 있는 구조·화면 개발로 유지보수성 개선</li>
+                </ul>
+              </div>
+            </div>
+          </div>
 
           {/* 미래교육원 */}
           <div className="r-entry">

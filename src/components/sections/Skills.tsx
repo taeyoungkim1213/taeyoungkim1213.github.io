@@ -7,11 +7,10 @@ import { useInView } from "@/hooks/useInView";
 const COMMAND = "skills --list";
 
 const SKILLS = [
-  { category: "Language ", items: ["Java", "SQL"] },
-  { category: "Framework", items: ["Spring Boot", "JPA", "QueryDSL"] },
-  { category: "Infra    ", items: ["Docker", "AWS"] },
-  { category: "DB       ", items: ["MySQL", "Redis"] },
-  { category: "Arch     ", items: ["Hexagonal Architecture"] },
+  { category: "Language ", items: ["Java", "JavaScript", "SQL"] },
+  { category: "Framework", items: ["Spring Boot", "Vue.js", "MyBatis"] },
+  { category: "DB       ", items: ["MSSQL", "PostgreSQL", "MySQL", "Redis"] },
+  { category: "Infra    ", items: ["Docker"] },
   { category: "CI/CD    ", items: ["GitHub Actions"] },
 ];
 
